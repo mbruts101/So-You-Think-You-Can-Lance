@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\AttackTrigger.cs" />
      <Compile Include="Assets\Collectable.cs" />
+     <Compile Include="Assets\EditorGrid.cs" />
      <Compile Include="Assets\LevelFinish.cs" />
      <Compile Include="Assets\LevelManager.cs" />
      <Compile Include="Assets\Obstacle.cs" />
