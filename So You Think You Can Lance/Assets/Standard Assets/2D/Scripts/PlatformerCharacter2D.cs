@@ -47,6 +47,8 @@ namespace UnitySampleAssets._2D
                 anim.SetBool("Ground", false);
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
 
+
+
             }
         }
 
