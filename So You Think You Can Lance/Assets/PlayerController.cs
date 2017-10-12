@@ -27,6 +27,20 @@ public class PlayerController : PhysicsObject {
                 velocity.y = velocity.y * 0.5f;
             }
         }
+        foreach(Touch touch in Input.touches)
+        {
+            if(touch.phase == TouchPhase.Began && grounded)
+            {
+                velocity.y = jumpTakeOffSpeed;
+            }
+            if(touch.phase == TouchPhase.Ended)
+            {
+                if(velocity.y > 0)
+                {
+                    velocity.y = velocity.y * 0.5f;
+                }
+            }
+        }
       //  targetVelocity = move * maxSpeed;
       
     }
