@@ -27,6 +27,7 @@ namespace UnitySampleAssets._2D
         public bool jumping;
         public float jumpTimer;
         public Vector2 maxJumpSpeed;
+        private Vector2 velocity;
 
         private void Awake()
         {
@@ -40,21 +41,22 @@ namespace UnitySampleAssets._2D
         {
             if (Input.GetKeyDown(KeyCode.Space) && grounded)
             {
-                jumpTimer += Time.deltaTime;
-                // Add a vertical force to the player.
+                
                 grounded = false;
                 jumping = true;
+                
                 anim.SetBool("Ground", false);
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
-
-
-
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, -jumpForce * 0.25f));
             }
         }
 
         private void FixedUpdate()
         {
-            
+            velocity +=  Physics2D.gravity * Time.deltaTime;
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
             anim.SetBool("Ground", grounded);
