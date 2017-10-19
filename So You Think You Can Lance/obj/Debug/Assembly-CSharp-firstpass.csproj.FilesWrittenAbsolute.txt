@@ -21,3 +21,12 @@
 /Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/Facebook.Unity.Settings.dll
+/Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/UnityEngine.UIAutomation.dll
+/Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/UnityEngine.GoogleAudioSpatializer.dll
+/Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/UnityEngine.SpatialTracking.dll
+/Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/UnityEngine.Advertisements.dll
+/Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/Unity.Cecil.dll
+/Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/Unity.Cecil.Pdb.dll
+/Users/DCole/Desktop/So-You-Think-You-Can-Lance/So You Think You Can Lance/Temp/bin/Debug/Unity.Cecil.Mdb.dll
