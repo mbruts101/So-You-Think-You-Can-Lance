@@ -1,4 +1,9 @@
-﻿using UnityEngine;
+﻿//Michael Brutsch
+//1933153
+//bruts101@mail.chapman.edu
+//Level Design 2
+//So You Think You Can Lance, changed it to auto run.
+using UnityEngine;
 using UnitySampleAssets.CrossPlatformInput;
 
 namespace UnitySampleAssets._2D

@@ -1,4 +1,10 @@
-﻿using System.Collections;
+﻿//Michael Brutsch
+//1933153
+//bruts101@mail.chapman.edu
+//Level Design 2
+//So You Think You Can Lance
+//Changed the class to fit my needs. Added touch input and changed jump functions. 
+using System.Collections;
 using UnityEngine;
 
 namespace UnitySampleAssets._2D
