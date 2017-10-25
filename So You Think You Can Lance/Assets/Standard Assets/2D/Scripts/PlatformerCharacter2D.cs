@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace UnitySampleAssets._2D
 {
@@ -7,18 +8,24 @@ namespace UnitySampleAssets._2D
     {
         private bool facingRight = true; // For determining which way the player is currently facing.
 
-        [SerializeField] private float maxSpeed = 10f; // The fastest the player can travel in the x axis.
-        [SerializeField] private float jumpForce = 10f; // Amount of force added when the player jumps.	
+        [SerializeField]
+        private float maxSpeed = 10f; // The fastest the player can travel in the x axis.
+        [SerializeField]
+        private float jumpForce = 10f; // Amount of force added when the player jumps.
 
-        [Range(0, 1)] [SerializeField] private float crouchSpeed = .36f;
-                                                     // Amount of maxSpeed applied to crouching movement. 1 = 100%
+        [Range(0, 1)]
+        [SerializeField]
+        private float crouchSpeed = .36f;
+        // Amount of maxSpeed applied to crouching movement. 1 = 100%
 
-        [SerializeField] private bool airControl = false; // Whether or not a player can steer while jumping;
-        [SerializeField] private LayerMask whatIsGround; // A mask determining what is ground to the character
+        [SerializeField]
+        private bool airControl = false; // Whether or not a player can steer while jumping;
+        [SerializeField]
+        private LayerMask whatIsGround; // A mask determining what is ground to the character
 
         private Transform groundCheck; // A position marking where to check if the player is grounded.
         private float groundedRadius = .2f; // Radius of the overlap circle to determine if grounded
-        private bool grounded = false; // Whether or not the player is grounded.
+        public bool grounded = false; // Whether or not the player is grounded.
         private Transform ceilingCheck; // A position marking where to check for ceilings
         private float ceilingRadius = .01f; // Radius of the overlap circle to determine if the player can stand up
         private Animator anim; // Reference to the player's animator component.
@@ -28,6 +35,11 @@ namespace UnitySampleAssets._2D
         public float jumpTimer;
         public Vector2 maxJumpSpeed;
         private Vector2 velocity;
+        float timer;
+        Rigidbody2D rb;
+        public AudioSource dirtRun;
+        public AudioSource dirtJump;
+
 
         private void Awake()
         {
@@ -36,31 +48,68 @@ namespace UnitySampleAssets._2D
             ceilingCheck = transform.Find("CeilingCheck");
             anim = GetComponent<Animator>();
             maxJumpSpeed.y = 7;
+            rb = GetComponent<Rigidbody2D>();
+            AudioSource[] audios = GetComponents<AudioSource>();
+            dirtRun = audios[0];
+            dirtJump = audios[1];
+
         }
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.Space) && grounded)
             {
-                
+
                 grounded = false;
                 jumping = true;
-                
+
                 anim.SetBool("Ground", false);
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpForce));
+                rb.AddForce(new Vector2(0f, jumpForce));
+                dirtRun.Stop();
+                dirtJump.Play();
+                
+
             }
             if (Input.GetKeyUp(KeyCode.Space))
             {
-                GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, -jumpForce * 0.25f));
+                rb.AddForce(new Vector2(0f, -jumpForce * 0.25f));
+                dirtJump.Stop();
+                StartCoroutine(delayedRunSound());
+
+            }
+            if (Input.touchCount > 0)
+            {
+                Touch touch = Input.touches[0];
+                if (touch.phase == TouchPhase.Began && grounded)
+                {
+                    grounded = false;
+                    jumping = true;
+                    anim.SetBool("Ground", false);
+                    rb.AddForce(new Vector2(0f, jumpForce));
+                    dirtRun.Stop();
+                    dirtJump.Play();
+
+                }
+                if (touch.phase == TouchPhase.Ended && jumping)
+                {
+                    
+                    dirtJump.Stop();
+                    GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, -jumpForce * 0.25f));
+
+
+                }
             }
         }
-
+        IEnumerator delayedRunSound()
+        {
+            yield return new WaitForSeconds(0.5f);
+            dirtRun.Play();
+        }
         private void FixedUpdate()
         {
-            velocity +=  Physics2D.gravity * Time.deltaTime;
+            velocity += Physics2D.gravity * Time.deltaTime;
             // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
             grounded = Physics2D.OverlapCircle(groundCheck.position, groundedRadius, whatIsGround);
             anim.SetBool("Ground", grounded);
-
             // Set the vertical animation
             anim.SetFloat("vSpeed", GetComponent<Rigidbody2D>().velocity.y);
         }
@@ -85,25 +134,25 @@ namespace UnitySampleAssets._2D
             if (grounded || airControl)
             {
                 // Reduce the speed if crouching by the crouchSpeed multiplier
-                move = (crouch ? move*crouchSpeed : move);
+                move = (crouch ? move * crouchSpeed : move);
 
                 // The Speed animator parameter is set to the absolute value of the horizontal input.
                 anim.SetFloat("Speed", Mathf.Abs(move));
 
                 // Move the character
-                GetComponent<Rigidbody2D>().velocity = new Vector2(move*maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
 
                 // If the input is moving the player right and the player is facing left...
                 if (move > 0 && !facingRight)
                     // ... flip the player.
                     Flip();
-                    // Otherwise if the input is moving the player left and the player is facing right...
+                // Otherwise if the input is moving the player left and the player is facing right...
                 else if (move < 0 && facingRight)
                     // ... flip the player.
                     Flip();
             }
-           
-            
+
+
         }
 
 

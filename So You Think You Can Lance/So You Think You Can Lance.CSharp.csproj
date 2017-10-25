@@ -99,13 +99,18 @@
     <Compile Include="Assets\AttackTrigger.cs" />
     <Compile Include="Assets\Collectable.cs" />
     <Compile Include="Assets\EditorGrid.cs" />
+    <Compile Include="Assets\enemyScript.cs" />
     <Compile Include="Assets\LevelFinish.cs" />
     <Compile Include="Assets\LevelManager.cs" />
+    <Compile Include="Assets\LevelSelect.cs" />
     <Compile Include="Assets\MoveRight.cs" />
     <Compile Include="Assets\Obstacle.cs" />
     <Compile Include="Assets\PhysicsObject.cs" />
     <Compile Include="Assets\PlayerAttack.cs" />
     <Compile Include="Assets\PlayerController.cs" />
+    <Compile Include="Assets\rockSpawn.cs" />
+    <Compile Include="Assets\Sink.cs" />
+    <Compile Include="Assets\treeTeleport.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Note about Editor Folder.txt" />

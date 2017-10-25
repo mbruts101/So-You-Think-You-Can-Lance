@@ -1,6 +1,207 @@
 Base path: D:/Unity/Editor/Data
 Cmd: initializeCompiler
-Cmd: compileSnippet
-  api=4 type=0 insize=1631 outsize=1082 kw= pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA ok=1
-Cmd: compileSnippet
-  api=4 type=1 insize=1631 outsize=502 kw= pd=UNITY_NO_DXT5nm UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_CUBEMAP_ARRAY UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF2 SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=9655 outsize=2158 ok=1
+Cmd: preprocess
+  insize=11714 outsize=749 ok=1
+Cmd: preprocess
+  insize=452 outsize=452 ok=1
+Cmd: preprocess
+  error: 1 plat 20 at (0): texcoord2 missing from surface shader's vertex input struct (appdata), disabled dynamic GI and meta pass generation
+  insize=1651 outsize=1730 ok=1
+Cmd: preprocess
+  insize=1371 outsize=507 ok=1
+Cmd: preprocess
+  insize=9016 outsize=768 ok=1
+Cmd: preprocess
+  insize=1844 outsize=424 ok=1
+Cmd: preprocess
+  insize=1059 outsize=428 ok=1
+Cmd: preprocess
+  insize=2933 outsize=171 ok=1
+Cmd: preprocess
+  insize=1149 outsize=390 ok=1
+Cmd: preprocess
+  insize=5526 outsize=2326 ok=1
+Cmd: preprocess
+  insize=2058 outsize=478 ok=1
+Cmd: preprocess
+  insize=1444 outsize=486 ok=1
+Cmd: preprocess
+  insize=1144 outsize=1306 ok=1
+Cmd: preprocess
+  insize=3807 outsize=736 ok=1
+Cmd: preprocess
+  insize=1533 outsize=1086 ok=1
+Cmd: preprocess
+  insize=889 outsize=197 ok=1
+Cmd: preprocess
+  error: 1 plat 20 at (0): texcoord2 missing from surface shader's vertex input struct (appdata), disabled dynamic GI and meta pass generation
+  insize=1486 outsize=1675 ok=1
+Cmd: preprocess
+  insize=5602 outsize=869 ok=1
+Cmd: preprocess
+  insize=7091 outsize=344 ok=1
+Cmd: preprocess
+  insize=1060 outsize=1390 ok=1
+Cmd: preprocess
+  insize=1328 outsize=367 ok=1
+Cmd: preprocess
+  insize=1381 outsize=482 ok=1
+Cmd: preprocess
+  error: 2 plat 20 at (42): Can't find include file frag_ao.cginc
+  error: 2 plat 20 at (45): Can't find include file frag_ao.cginc
+  error: 2 plat 20 at (48): Can't find include file frag_ao.cginc
+  error: 2 plat 20 at (51): Can't find include file frag_ao.cginc
+  error: 2 plat 20 at (55): Can't find include file frag_ao.cginc
+  insize=6914 outsize=769 ok=0
+Cmd: preprocess
+  insize=1320 outsize=387 ok=1
+Cmd: preprocess
+  insize=13618 outsize=2860 ok=1
+Cmd: preprocess
+  insize=1097 outsize=957 ok=1
+Cmd: preprocess
+  insize=2838 outsize=768 ok=1
+Cmd: preprocess
+  insize=1112 outsize=377 ok=1
+Cmd: preprocess
+  insize=1528 outsize=459 ok=1
+Cmd: preprocess
+  insize=1502 outsize=338 ok=1
+Cmd: preprocess
+  insize=1846 outsize=803 ok=1
+Cmd: preprocess
+  insize=2464 outsize=1145 ok=1
+Cmd: preprocess
+  insize=1550 outsize=417 ok=1
+Cmd: preprocess
+  insize=1423 outsize=401 ok=1
+Cmd: preprocess
+  insize=2486 outsize=727 ok=1
+Cmd: preprocess
+  insize=1104 outsize=343 ok=1
+Cmd: preprocess
+  insize=829 outsize=306 ok=1
+Cmd: preprocess
+  insize=2425 outsize=1075 ok=1
+Cmd: preprocess
+  insize=33550 outsize=342 ok=1
+Cmd: preprocess
+  insize=1367 outsize=333 ok=1
+Cmd: preprocess
+  insize=3839 outsize=701 ok=1
+Cmd: preprocess
+  insize=1144 outsize=322 ok=1
+Cmd: preprocess
+  insize=5672 outsize=1613 ok=1
+Cmd: preprocess
+  insize=669 outsize=246 ok=1
+Cmd: preprocess
+  insize=763 outsize=263 ok=1
+Cmd: preprocess
+  insize=11957 outsize=1864 ok=1
+Cmd: preprocess
+  insize=2926 outsize=504 ok=1
+Cmd: preprocess
+  insize=1182 outsize=431 ok=1
+Cmd: preprocess
+  insize=11953 outsize=2624 ok=1
+Cmd: preprocess
+  insize=12755 outsize=2735 ok=1
+Cmd: preprocess
+  insize=6617 outsize=723 ok=1
+Cmd: preprocess
+  insize=4254 outsize=198 ok=1
+Cmd: preprocess
+  insize=3050 outsize=749 ok=1
+Cmd: preprocess
+  insize=8630 outsize=991 ok=1
+Cmd: preprocess
+  insize=2610 outsize=1271 ok=1
+Cmd: preprocess
+  insize=1119 outsize=519 ok=1
+Cmd: preprocess
+  insize=14417 outsize=2465 ok=1
+Cmd: preprocess
+  insize=2133 outsize=537 ok=1
+Cmd: preprocess
+  insize=1739 outsize=1072 ok=1
+Cmd: preprocess
+  insize=3280 outsize=1889 ok=1
+Cmd: preprocess
+  insize=1849 outsize=373 ok=1
+Cmd: preprocess
+  insize=708 outsize=708 ok=1
+Cmd: preprocess
+  insize=743 outsize=743 ok=1
+Cmd: preprocess
+  insize=28379 outsize=4295 ok=1
+Cmd: preprocess
+  insize=4351 outsize=574 ok=1
+Cmd: preprocess
+  insize=2464 outsize=1295 ok=1
+Cmd: preprocess
+  insize=1908 outsize=371 ok=1
+Cmd: preprocess
+  insize=1228 outsize=166 ok=1
+Cmd: preprocess
+  insize=1173 outsize=427 ok=1
+Cmd: preprocess
+  insize=1284 outsize=509 ok=1
+Cmd: preprocess
+  insize=777 outsize=252 ok=1
+Cmd: preprocess
+  insize=6168 outsize=838 ok=1
+Cmd: preprocess
+  insize=5928 outsize=726 ok=1
+Cmd: preprocess
+  insize=622 outsize=350 ok=1
+Cmd: preprocess
+  insize=1057 outsize=1633 ok=1
+Cmd: preprocess
+  insize=7672 outsize=835 ok=1
+Cmd: preprocess
+  insize=33559 outsize=341 ok=1
+Cmd: preprocess
+  insize=5406 outsize=1843 ok=1
+Cmd: preprocess
+  insize=743 outsize=743 ok=1
+Cmd: preprocess
+  insize=2464 outsize=1140 ok=1
+Cmd: preprocess
+  insize=7076 outsize=325 ok=1
+Cmd: preprocess
+  insize=4769 outsize=609 ok=1
+Cmd: preprocess
+  insize=5243 outsize=1074 ok=1
+Cmd: preprocess
+  insize=1659 outsize=756 ok=1
+Cmd: preprocess
+  insize=6093 outsize=1292 ok=1
+Cmd: preprocess
+  insize=918 outsize=377 ok=1
+Cmd: preprocess
+  insize=758 outsize=303 ok=1
+Cmd: preprocess
+  insize=4159 outsize=642 ok=1
+Cmd: preprocess
+  insize=1011 outsize=372 ok=1
+Cmd: preprocess
+  insize=1491 outsize=370 ok=1
+Cmd: preprocess
+  insize=2350 outsize=1060 ok=1
+Cmd: preprocess
+  insize=920 outsize=1162 ok=1
+Cmd: preprocess
+  insize=6299 outsize=827 ok=1
+Cmd: preprocess
+  insize=1221 outsize=566 ok=1
+Cmd: preprocess
+  insize=1370 outsize=465 ok=1
+Cmd: preprocess
+  insize=701 outsize=331 ok=1
+Cmd: preprocess
+  insize=858 outsize=390 ok=1
+Cmd: preprocess
+  insize=1886 outsize=767 ok=1

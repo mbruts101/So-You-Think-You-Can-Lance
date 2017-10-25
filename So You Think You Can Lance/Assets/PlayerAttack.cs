@@ -6,45 +6,111 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnitySampleAssets._2D;
 
-public class PlayerAttack : MonoBehaviour {
-
+public class PlayerAttack : MonoBehaviour
+{
+    public float minSwipeDistY;
+    public float minSwipeDistX;
+    private Vector2 startSwipePos;
     private bool attacking = false;
     private float attackTimer = 0f;
-    private float attackCoolDown = 2f;
+    private float attackCoolDown = 0.5f;
     public Collider2D attackTrigger;
     public Collider2D upAttackTrigger;
     private Animator anim;
-	// Use this for initialization
-	void Awake () {
+    public GameObject Player;
+    // Use this for initialization
+    void Awake()
+    {
         anim = gameObject.GetComponent<Animator>();
         attackTrigger.enabled = false;
+        attackTrigger.gameObject.active = false;
+        
         upAttackTrigger.enabled = false;
-	}
+        Player = GameObject.FindGameObjectWithTag("Player");
+    }
     void Start()
     {
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.D) && !attacking){
+    public void attack()
+    {
+        attacking = true;
+        attackTimer = 0;
+        attackTrigger.gameObject.active = true;
+        attackTrigger.enabled = true;
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.D) && !attacking)
+        {
             attacking = true;
             attackTimer = 0;
-
+            attackTrigger.gameObject.active = true;
             attackTrigger.enabled = true;
-           
+
         }
-        if(Input.GetKeyDown(KeyCode.W) && !attacking)
+        if (Input.GetKeyDown(KeyCode.W) && !attacking)
         {
             attacking = true;
             attackTimer = 0;
 
             upAttackTrigger.enabled = true;
         }
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.touches[0];
+
+            if (touch.phase == TouchPhase.Began)
+            {
+                startSwipePos = touch.position;
+
+            }
+            if (touch.phase == TouchPhase.Ended)
+            {
+                float swipeDistVertical = Mathf.Abs(touch.position.y - startSwipePos.y);
+                float swipeDistHorizontal = Mathf.Abs(touch.position.x - startSwipePos.x);
+
+                if (swipeDistVertical > minSwipeDistY)
+                {
+                    float swipeValue = Mathf.Sign(touch.position.y - startSwipePos.y);
+                    if (swipeValue > 0)
+                    {
+                        attacking = true;
+                        attackTimer = 0;
+                        upAttackTrigger.enabled = true;
+                    }
+                    else if (swipeValue < 0)
+                    {
+                        //future down swipe attack
+                    }
+
+                }
+                if (swipeDistHorizontal > minSwipeDistX)
+                {
+                    float swipeValue = Mathf.Sign(touch.position.x - startSwipePos.x);
+                    if (swipeValue > 0)
+                    {
+                        attacking = true;
+                        attackTimer = 0;
+                        attackTrigger.gameObject.active = false;
+                        attackTrigger.enabled = true;
+
+                    }
+                    else if (swipeValue < 0)
+                    {
+                        //future back swipe move?
+                    }
+                }
+            }
+
+        }
+
         if (attacking)
         {
-            
+
             if (attackTimer < attackCoolDown)
             {
                 attackTimer += Time.deltaTime;
@@ -53,6 +119,7 @@ public class PlayerAttack : MonoBehaviour {
             {
                 attacking = false;
                 attackTrigger.enabled = false;
+                attackTrigger.gameObject.active = false;
                 upAttackTrigger.enabled = false;
             }
         }

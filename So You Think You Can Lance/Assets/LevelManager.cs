@@ -6,10 +6,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
     public int coinsTotal;
     public int coinsCollected = 0;
+    public Text coinscollectedText;
+    public Text coinsTotalText;
 	// Use this for initialization
 	void Start () {
         CountTotalCoinsAvailable();
@@ -23,10 +26,10 @@ public class LevelManager : MonoBehaviour {
     void CountTotalCoinsAvailable()
     {
         coinsTotal = GameObject.FindGameObjectsWithTag("Collectable").Length;
-
     }
     public void CoinCollected()
     {
         coinsCollected += 1;
+        coinscollectedText.text = coinsCollected.ToString();
     }
 }

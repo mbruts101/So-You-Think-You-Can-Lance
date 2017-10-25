@@ -24,7 +24,7 @@ public class Obstacle : MonoBehaviour {
         {
             Destroy(col.gameObject);
             
-            Application.LoadLevel(0);
+            Application.LoadLevel(Application.loadedLevel);
         }
     }
 }
