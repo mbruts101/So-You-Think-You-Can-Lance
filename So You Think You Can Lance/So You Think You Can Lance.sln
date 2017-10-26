@@ -1,4 +1,5 @@
 ﻿
+<<<<<<< Updated upstream
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance.Plugins", "So You Think You Can Lance.Plugins.csproj", "{A2491DF5-9FF8-BBD5-A0AE-C315AA05DA82}"
@@ -8,6 +9,17 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance.Editor", "So You Think You Can Lance.Editor.csproj", "{0A55E067-8414-A3CA-6056-F6011F3AFFA0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance.Editor.Plugins", "So You Think You Can Lance.Editor.Plugins.csproj", "{3C038883-E53A-3108-D371-A85D0F870C2F}"
+=======
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance", "Assembly-CSharp-firstpass.csproj", "{3BF6A5C5-73C1-1DBE-FBEA-0FEC63CB16ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance", "Assembly-CSharp.csproj", "{BCE2904F-4254-68B1-158A-4170D3D44D5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance", "Assembly-CSharp-Editor.csproj", "{01864E85-4F04-2A35-4FCA-3A7E3A1AF2C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance", "Assembly-CSharp-Editor-firstpass.csproj", "{AB0321A3-53CC-1352-3E62-F424A4928BB9}"
+>>>>>>> Stashed changes
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +27,7 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< Updated upstream
 		{A2491DF5-9FF8-BBD5-A0AE-C315AA05DA82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A2491DF5-9FF8-BBD5-A0AE-C315AA05DA82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2491DF5-9FF8-BBD5-A0AE-C315AA05DA82}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -31,8 +44,29 @@ Global
 		{3C038883-E53A-3108-D371-A85D0F870C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C038883-E53A-3108-D371-A85D0F870C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C038883-E53A-3108-D371-A85D0F870C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{3BF6A5C5-73C1-1DBE-FBEA-0FEC63CB16ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF6A5C5-73C1-1DBE-FBEA-0FEC63CB16ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF6A5C5-73C1-1DBE-FBEA-0FEC63CB16ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BF6A5C5-73C1-1DBE-FBEA-0FEC63CB16ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCE2904F-4254-68B1-158A-4170D3D44D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCE2904F-4254-68B1-158A-4170D3D44D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCE2904F-4254-68B1-158A-4170D3D44D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCE2904F-4254-68B1-158A-4170D3D44D5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01864E85-4F04-2A35-4FCA-3A7E3A1AF2C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01864E85-4F04-2A35-4FCA-3A7E3A1AF2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01864E85-4F04-2A35-4FCA-3A7E3A1AF2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01864E85-4F04-2A35-4FCA-3A7E3A1AF2C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB0321A3-53CC-1352-3E62-F424A4928BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB0321A3-53CC-1352-3E62-F424A4928BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB0321A3-53CC-1352-3E62-F424A4928BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB0321A3-53CC-1352-3E62-F424A4928BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> Stashed changes
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

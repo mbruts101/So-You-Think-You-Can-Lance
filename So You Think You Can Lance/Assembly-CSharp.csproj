@@ -54,13 +54,12 @@
      <Compile Include="Assets\AttackTrigger.cs" />
      <Compile Include="Assets\Collectable.cs" />
      <Compile Include="Assets\EditorGrid.cs" />
+     <Compile Include="Assets\enemyScript.cs" />
      <Compile Include="Assets\LevelFinish.cs" />
      <Compile Include="Assets\LevelManager.cs" />
-     <Compile Include="Assets\MoveRight.cs" />
+     <Compile Include="Assets\LevelSelect.cs" />
      <Compile Include="Assets\Obstacle.cs" />
-     <Compile Include="Assets\PhysicsObject.cs" />
      <Compile Include="Assets\PlayerAttack.cs" />
-     <Compile Include="Assets\PlayerController.cs" />
      <Compile Include="Assets\rockSpawn.cs" />
      <Compile Include="Assets\Sink.cs" />
      <Compile Include="Assets\treeTeleport.cs" />
@@ -207,12 +206,6 @@
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>/Users/DCole/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>/Users/DCole/Library/Unity/cache/packages/packages.unity.com/com.unity.purchasing@1.0.1/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
