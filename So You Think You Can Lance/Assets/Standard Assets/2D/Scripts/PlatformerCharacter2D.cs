@@ -82,6 +82,10 @@ namespace UnitySampleAssets._2D
                 StartCoroutine(delayedRunSound());
 
             }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
             if (Input.touchCount > 0)
             {
                 Touch touch = Input.touches[0];

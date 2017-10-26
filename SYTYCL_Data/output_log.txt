@@ -1,0 +1,35 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 850M (ID=0x1391)
+    Vendor:   NVIDIA
+    VRAM:     2018 MB
+    Driver:   21.21.13.6909
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Charlie\Documents\GitHub\So-You-Think-You-Can-Lance\SYTYCL_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.198 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.763639 ms
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 3d1c -> priority: 1 
+  Thread -> id: 1650 -> priority: 1 
+  Thread -> id: 36e4 -> priority: 1 
+  Thread -> id: 3ed0 -> priority: 1 
