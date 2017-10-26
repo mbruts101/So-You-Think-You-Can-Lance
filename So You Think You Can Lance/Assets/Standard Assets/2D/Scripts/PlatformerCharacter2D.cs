@@ -47,6 +47,7 @@ namespace UnitySampleAssets._2D
         public AudioSource dirtRun;
         public AudioSource dirtJump;
         public bool reloadLevel = true;
+		private int frameCount;
 
         private void Awake()
         {
@@ -64,16 +65,20 @@ namespace UnitySampleAssets._2D
         }
         void Update()
         {
-            if (rb.velocity.magnitude == 0)
-            {
-                if (Time.timeSinceLevelLoad > 0 && reloadLevel)
-                {
-                    Debug.Log("loading");
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                    reloadLevel = false;    
-                }
+			if (rb.velocity.magnitude == 0) {
+				frameCount++;
+				if (Time.timeSinceLevelLoad > 0 && reloadLevel && frameCount > 1) {
+					Debug.Log ("loading");
+					SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+					reloadLevel = false;   
+					frameCount = 0;
+				}
                 
-            }
+			} 
+			else 
+			{
+				frameCount = 0;
+			}
             if (Input.GetKeyDown(KeyCode.Space) && grounded)
             {
 
