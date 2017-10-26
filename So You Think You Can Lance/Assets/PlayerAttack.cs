@@ -25,7 +25,6 @@ public class PlayerAttack : MonoBehaviour
     {
         anim = gameObject.GetComponent<Animator>();
         attackTrigger.enabled = false;
-        attackTrigger.gameObject.active = false;
         
         upAttackTrigger.enabled = false;
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -119,7 +118,6 @@ public class PlayerAttack : MonoBehaviour
             {
                 attacking = false;
                 attackTrigger.enabled = false;
-                attackTrigger.gameObject.active = false;
                 upAttackTrigger.enabled = false;
             }
         }
