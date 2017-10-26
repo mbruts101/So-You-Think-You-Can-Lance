@@ -6,6 +6,7 @@
 //Changed the class to fit my needs. Added touch input and changed jump functions. 
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UnitySampleAssets._2D
 {
@@ -45,10 +46,11 @@ namespace UnitySampleAssets._2D
         Rigidbody2D rb;
         public AudioSource dirtRun;
         public AudioSource dirtJump;
-
+        public bool reloadLevel = true;
 
         private void Awake()
         {
+            
             // Setting up references.
             groundCheck = transform.Find("GroundCheck");
             ceilingCheck = transform.Find("CeilingCheck");
@@ -62,6 +64,16 @@ namespace UnitySampleAssets._2D
         }
         void Update()
         {
+            if (rb.velocity.magnitude == 0)
+            {
+                if (Time.timeSinceLevelLoad > 0 && reloadLevel)
+                {
+                    Debug.Log("loading");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                    reloadLevel = false;    
+                }
+                
+            }
             if (Input.GetKeyDown(KeyCode.Space) && grounded)
             {
 
