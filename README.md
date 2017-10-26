@@ -3,7 +3,7 @@ Its a game created by Michael, Raven, Charlie, Daniel, and Brendan
 
 Full Name: Michael Brutsch
 Student ID: 1933153
-Chapman Email: brtus101@mail.chapman.edu
+Chapman Email: bruts101@mail.chapman.edu
 Course Number and Section:
 Assignment or Excercise Number: Beta
 
