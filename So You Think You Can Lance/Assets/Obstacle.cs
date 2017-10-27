@@ -27,4 +27,14 @@ public class Obstacle : MonoBehaviour {
             Application.LoadLevel(Application.loadedLevel);
         }
     }
+
+	void OnTriggerEnter2d(Collision2D col)
+	{
+		if(col.gameObject.tag == "Player")
+		{
+			Destroy(col.gameObject);
+
+			Application.LoadLevel(Application.loadedLevel);
+		}
+	}
 }

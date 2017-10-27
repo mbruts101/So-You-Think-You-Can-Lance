@@ -21,9 +21,12 @@ public class AttackTrigger : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col)
     {
         Debug.Log(col.gameObject.tag);
-        if(col.gameObject.tag == "Enemy")
-        {
-            Destroy(col.gameObject);
-        }
+		if (col.gameObject.tag == "Enemy") {
+			Destroy (col.gameObject);
+		} 
+		else if (col.gameObject.tag == "Stabbable")
+		{
+			Destroy (col.gameObject);
+		}
     }
 }

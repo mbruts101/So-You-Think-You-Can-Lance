@@ -19,10 +19,16 @@ public class PlayerAttack : MonoBehaviour
     public Collider2D attackTrigger;
     public Collider2D upAttackTrigger;
     private Animator anim;
+	private SpriteRenderer attackSR;
+	private SpriteRenderer lanceSR;
     public GameObject Player;
+	public GameObject lance;
+
+
     // Use this for initialization
     void Awake()
     {
+
         anim = gameObject.GetComponent<Animator>();
         attackTrigger.enabled = false;
         
@@ -31,8 +37,10 @@ public class PlayerAttack : MonoBehaviour
     }
     void Start()
     {
-
+		attackSR = attackTrigger.GetComponent<SpriteRenderer> ();
+		lanceSR = lance.GetComponent<SpriteRenderer> ();
     }
+
     public void attack()
     {
         attacking = true;
@@ -49,6 +57,9 @@ public class PlayerAttack : MonoBehaviour
             attackTimer = 0;
             attackTrigger.gameObject.active = true;
             attackTrigger.enabled = true;
+			//sprites
+			lanceSR.enabled = false;
+			attackSR.enabled = true;
 
         }
         if (Input.GetKeyDown(KeyCode.W) && !attacking)
@@ -119,6 +130,10 @@ public class PlayerAttack : MonoBehaviour
                 attacking = false;
                 attackTrigger.enabled = false;
                 upAttackTrigger.enabled = false;
+
+				//sprites
+				attackSR.enabled = false;
+				lanceSR.enabled = true;
             }
         }
     }
