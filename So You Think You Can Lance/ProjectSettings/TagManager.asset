@@ -9,6 +9,7 @@ TagManager:
   - Collectable
   - GameManager
   - LevelManager
+  - Chicken
   layers:
   - Default
   - TransparentFX

@@ -28,12 +28,11 @@ public class Obstacle : MonoBehaviour {
         }
     }
 
-	void OnTriggerEnter2d(Collision2D col)
+	void OnTriggerEnter2D(Collision2D col)
 	{
 		if(col.gameObject.tag == "Player")
 		{
 			Destroy(col.gameObject);
-
 			Application.LoadLevel(Application.loadedLevel);
 		}
 	}

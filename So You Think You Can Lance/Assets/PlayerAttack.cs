@@ -34,6 +34,7 @@ public class PlayerAttack : MonoBehaviour
         
         upAttackTrigger.enabled = false;
         Player = GameObject.FindGameObjectWithTag("Player");
+
     }
     void Start()
     {
