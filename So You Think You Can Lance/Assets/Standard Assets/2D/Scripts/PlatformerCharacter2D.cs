@@ -48,6 +48,17 @@ namespace UnitySampleAssets._2D
         public AudioSource dirtJump;
         public bool reloadLevel = true;
 		private int frameCount;
+        public float minSwipeDistY;
+        public float minSwipeDistX;
+        private Vector2 startSwipePos;
+        private bool attacking = false;
+        private float attackTimer = 0f;
+        private float attackCoolDown = 0.5f;
+        public Collider2D attackTrigger;
+        public Collider2D upAttackTrigger;
+        private SpriteRenderer attackSR;
+        private SpriteRenderer lanceSR;
+        public GameObject lance;
 
         private void Awake()
         {
@@ -61,6 +72,9 @@ namespace UnitySampleAssets._2D
             AudioSource[] audios = GetComponents<AudioSource>();
             dirtRun = audios[0];
             dirtJump = audios[1];
+            attackSR = attackTrigger.GetComponent<SpriteRenderer>();
+            lanceSR = lance.GetComponent<SpriteRenderer>();
+
 
         }
         void Update()
@@ -108,21 +122,75 @@ namespace UnitySampleAssets._2D
                 Touch touch = Input.touches[0];
                 if (touch.phase == TouchPhase.Began && grounded)
                 {
-                    grounded = false;
-                    jumping = true;
-                    anim.SetBool("Ground", false);
-                    rb.AddForce(new Vector2(0f, jumpForce));
-                    dirtRun.Stop();
-                    dirtJump.Play();
+
+                    startSwipePos = touch.position;
 
                 }
                 if (touch.phase == TouchPhase.Ended && jumping)
                 {
-                    
-                    dirtJump.Stop();
-                    GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, -jumpForce * 0.25f));
+                    float swipeDistVertical = Mathf.Abs(touch.position.y - startSwipePos.y);
+                    float swipeDistHorizontal = Mathf.Abs(touch.position.x - startSwipePos.x);
 
+                    if (swipeDistVertical > minSwipeDistY)
+                    {
+                        float swipeValue = Mathf.Sign(touch.position.y - startSwipePos.y);
+                        if (swipeValue > 0)
+                        {
+                            attacking = true;
+                            attackTimer = 0;
+                            upAttackTrigger.enabled = true;
+                        }
+                        else if (swipeValue < 0)
+                        {
+                            //future down swipe attack
+                        }
 
+                    }
+                    if (swipeDistHorizontal > minSwipeDistX)
+                    {
+                        float swipeValue = Mathf.Sign(touch.position.x - startSwipePos.x);
+                        if (swipeValue > 0)
+                        {
+                            attacking = true;
+                            attackTimer = 0;
+                            attackTrigger.gameObject.active = false;
+                            attackTrigger.enabled = true;
+
+                        }
+                        else if (swipeValue < 0)
+                        {
+                            //future back swipe move?
+                        }
+                    }
+                    else
+                    {
+                        grounded = false;
+                        jumping = true;
+                        anim.SetBool("Ground", false);
+                        rb.AddForce(new Vector2(0f, jumpForce));
+                        dirtRun.Stop();
+                        dirtJump.Play();
+                    }
+
+                }
+            }
+
+            if (attacking)
+            {
+
+                if (attackTimer < attackCoolDown)
+                {
+                    attackTimer += Time.deltaTime;
+                }
+                else
+                {
+                    attacking = false;
+                    attackTrigger.enabled = false;
+                    upAttackTrigger.enabled = false;
+
+                    //sprites
+                    attackSR.enabled = false;
+                    lanceSR.enabled = true;
                 }
             }
         }
