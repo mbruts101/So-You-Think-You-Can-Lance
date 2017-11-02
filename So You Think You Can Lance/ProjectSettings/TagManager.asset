@@ -10,6 +10,7 @@ TagManager:
   - GameManager
   - LevelManager
   - Chicken
+  - Stabbable
   layers:
   - Default
   - TransparentFX
@@ -61,4 +62,7 @@ TagManager:
     locked: 0
   - name: Character
     uniqueID: 1706182505
+    locked: 0
+  - name: Lance
+    uniqueID: 1490691747
     locked: 0

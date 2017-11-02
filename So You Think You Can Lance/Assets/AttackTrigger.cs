@@ -9,6 +9,7 @@ using UnityEngine;
 
 public class AttackTrigger : MonoBehaviour {
 	public AudioSource chickenDeath;
+
 	// Use this for initialization
 	void Start () {
 		AudioSource[] audios = GetComponents<AudioSource>();
@@ -19,19 +20,23 @@ public class AttackTrigger : MonoBehaviour {
 	void Update () {
 		
 	}
+
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col.gameObject.tag);
-		if (col.gameObject.tag == "Enemy" || col.gameObject.tag == "Chicken") {
-			if (col.gameObject.tag == "Chicken") {
-				chickenDeath.Play ();
-			}
-
-			Destroy (col.gameObject);
-		} 
-		else if (col.gameObject.tag == "Stabbable")
+		if (col.gameObject.tag == "Stabbable")
 		{
-			Destroy (col.gameObject);
+			chickenDeath.Play ();
+			col.enabled = false;
+			StartCoroutine (Stab(col));
+			//col.gameObject.transform.SetParent(v.transform);
+			chickenDeath.Play ();
 		}
     }
+
+	IEnumerator Stab(Collider2D col) 
+	{
+		yield return new WaitForSeconds (.1f);
+		var v = GameObject.Find ("Lance");
+		col.gameObject.transform.SetParent(v.transform);
+	}
 }
