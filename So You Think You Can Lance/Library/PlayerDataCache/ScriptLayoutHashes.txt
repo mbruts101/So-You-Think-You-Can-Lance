@@ -3,6 +3,7 @@ OSXStandalone
 7ba1e84ad3d2d8813486668e75f842ce Assembly-CSharp-firstpass.dll:UnitySampleAssets.Effects.ExtinguishableParticleSystem
 78a93563d816fda5fd1bd025dec23f3f Assembly-CSharp-firstpass.dll:UnitySampleAssets.ImageEffects.CameraInfo
 <<<<<<< HEAD
+<<<<<<< HEAD
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 8144169769d51429c4aedc8b0f92d47b UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -15,6 +16,8 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 cc897e31f90a455da1ad6fffc97043f1 Assembly-CSharp-firstpass.dll:UnitySampleAssets.ImageEffects.AntialiasingAsPostEffect
@@ -32,6 +35,7 @@ daabd8d8800a87cff11f866c4d06a232 Assembly-CSharp-firstpass.dll:UnitySampleAssets
 6ef10f2c9d52b20165b73caa5f02409d Assembly-CSharp-firstpass.dll:UnitySampleAssets.Vehicles.Aeroplane.AeroplaneUserControl4Axis
 26dcea2fef095d4b4a753b5262d7d037 Assembly-CSharp-firstpass.dll:UnitySampleAssets.Effects.Hose
 <<<<<<< HEAD
+<<<<<<< HEAD
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -102,6 +106,10 @@ f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 8e9f5b922979e9356a11d2ee2b32ee60 Assembly-CSharp-firstpass.dll:UnitySampleAssets.CrossPlatformInput.TiltInput
 aa13baec1c19c8fa869cb21cb01a3767 Assembly-CSharp-firstpass.dll:.WaterBase
 >>>>>>> origin/master
+=======
+8e9f5b922979e9356a11d2ee2b32ee60 Assembly-CSharp-firstpass.dll:UnitySampleAssets.CrossPlatformInput.TiltInput
+aa13baec1c19c8fa869cb21cb01a3767 Assembly-CSharp-firstpass.dll:.WaterBase
+>>>>>>> origin/master
 286edcc013c341d3700d1011ae39370c Assembly-CSharp.dll:.treeTeleport
 5c6578703ab2eff2dcd9d91d16cb49e8 Assembly-CSharp.dll:.enemyScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:UnitySampleAssets.Vehicles.Ball.BallUserControl
@@ -109,6 +117,7 @@ aa13baec1c19c8fa869cb21cb01a3767 Assembly-CSharp-firstpass.dll:.WaterBase
 71778c9b45c50a65b865c5bc42204043 Assembly-CSharp-firstpass.dll:.NoiseEffect
 2445c6fdcc27539f9831af8c1a39354d Assembly-CSharp-firstpass.dll:UnitySampleAssets.ImageEffects.DepthOfFieldScatter
 6c156248975c65e334daa4cbfba64bd1 Assembly-CSharp-firstpass.dll:UnitySampleAssets.Utility.TimedObjectActivator
+<<<<<<< HEAD
 <<<<<<< HEAD
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -124,6 +133,8 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 =======
 >>>>>>> origin/master
+=======
+>>>>>>> origin/master
 38f2aefc9dcf0f8107e7bd37238b3096 Assembly-CSharp-firstpass.dll:UnitySampleAssets.ImageEffects.BlurEffect
 f5ce04d51633a5a2e05a731aa45ef200 Assembly-CSharp-firstpass.dll:UnitySampleAssets.ImageEffects.MotionBlur
 db782f22d720a4e9886ccd9125d81b92 Assembly-CSharp-firstpass.dll:UnitySampleAssets.Cameras.ProtectCameraFromWallClip
@@ -137,11 +148,14 @@ dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics
 879b3df2ab67cfd00172f75f85a7a583 Assembly-CSharp-firstpass.dll:UnitySampleAssets.Utility.SimpleMouseRotator
 1ba414bf579fc775dc2ff4b6afeb7f38 Assembly-CSharp-firstpass.dll:UnitySampleAssets.Vehicles.Aeroplane.AeroplaneAudio
 <<<<<<< HEAD
+<<<<<<< HEAD
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 9592c70db37f0c96bd3aeb32d1386726 Assembly-CSharp-firstpass.dll:UnitySampleAssets.Vehicles.Aeroplane.AeroplaneController
@@ -205,10 +219,13 @@ ae46a0f36c2cd7967e006662fd65bccf Assembly-CSharp-firstpass.dll:UnitySampleAssets
 7a5f4c3ba749ce79263b21b36598e3ee Assembly-CSharp-firstpass.dll:UnitySampleAssets.Cameras.HandHeldCam
 cbc1e975153080065baac2acc7db9309 Assembly-CSharp-firstpass.dll:UnitySampleAssets.Vehicles.Aeroplane.AeroplanePropellerAnimator
 <<<<<<< HEAD
+<<<<<<< HEAD
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.PlayModeRunnerCallback
 2a56361227def9f56c2cf57a88b32f4d UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.PlaymodeTestsController
 64eb32cc721b1cc68a91ed57461e188c UnityEngine.TestRunner.dll:UnityEngine.TestTools.TestRunner.Callbacks.RemoteTestResultSender
 e0f7ffd5d5c2abe4b2e16569a21163da UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 cac5093fb1baf037bd671ecbc6727828 Assembly-CSharp-firstpass.dll:UnitySampleAssets.ImageEffects.ScreenOverlay
@@ -223,11 +240,14 @@ c3827c1787df25fd81ff8c2ee8ded891 Assembly-CSharp-firstpass.dll:UnitySampleAssets
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.Collectable
 3073f6d8af9d737e4e72afa03e0ce866 Assembly-CSharp-firstpass.dll:UnitySampleAssets.SceneUtils.PlaceTargetWithMouse
 <<<<<<< HEAD
+<<<<<<< HEAD
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
+=======
+>>>>>>> origin/master
 =======
 >>>>>>> origin/master
 ec50a9a0f499482d9c172149ad0912e6 Assembly-CSharp-firstpass.dll:UnitySampleAssets.ImageEffects.ContrastEnhance
