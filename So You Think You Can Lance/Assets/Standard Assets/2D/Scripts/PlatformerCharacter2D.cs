@@ -56,9 +56,6 @@ namespace UnitySampleAssets._2D
         private float attackCoolDown = 0.5f;
         public Collider2D attackTrigger;
         public Collider2D upAttackTrigger;
-        private SpriteRenderer attackSR;
-        private SpriteRenderer lanceSR;
-        public GameObject lance;
 
         private void Awake()
         {
@@ -72,8 +69,6 @@ namespace UnitySampleAssets._2D
             AudioSource[] audios = GetComponents<AudioSource>();
             dirtRun = audios[0];
             dirtJump = audios[1];
-            attackSR = attackTrigger.GetComponent<SpriteRenderer>();
-            lanceSR = lance.GetComponent<SpriteRenderer>();
 
 
         }
@@ -126,7 +121,7 @@ namespace UnitySampleAssets._2D
                     startSwipePos = touch.position;
 
                 }
-                if (touch.phase == TouchPhase.Ended && jumping)
+                if (touch.phase == TouchPhase.Ended)
                 {
                     float swipeDistVertical = Mathf.Abs(touch.position.y - startSwipePos.y);
                     float swipeDistHorizontal = Mathf.Abs(touch.position.x - startSwipePos.x);
@@ -156,6 +151,8 @@ namespace UnitySampleAssets._2D
                             attackTrigger.gameObject.active = false;
                             attackTrigger.enabled = true;
 
+                            GameObject.Find("Lance").GetComponent<Animator>().Play("Pierce");
+
                         }
                         else if (swipeValue < 0)
                         {
@@ -174,7 +171,16 @@ namespace UnitySampleAssets._2D
 
                 }
             }
+            if (Input.GetKeyDown(KeyCode.D) && !attacking)
+            {
+                attacking = true;
+                attackTimer = 0;
+                attackTrigger.gameObject.active = true;
+                attackTrigger.enabled = true;
 
+                GameObject.Find("Lance").GetComponent<Animator>().Play("Pierce");
+
+            }
             if (attacking)
             {
 
@@ -187,10 +193,6 @@ namespace UnitySampleAssets._2D
                     attacking = false;
                     attackTrigger.enabled = false;
                     upAttackTrigger.enabled = false;
-
-                    //sprites
-                    attackSR.enabled = false;
-                    lanceSR.enabled = true;
                 }
             }
         }
