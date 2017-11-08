@@ -11,6 +11,7 @@ TagManager:
   - LevelManager
   - Chicken
   - Stabbable
+  - Fire
   layers:
   - Default
   - TransparentFX
@@ -63,6 +64,12 @@ TagManager:
   - name: Character
     uniqueID: 1706182505
     locked: 0
+  - name: InFrontOfLance
+    uniqueID: 618782247
+    locked: 0
   - name: Lance
     uniqueID: 1490691747
+    locked: 0
+  - name: BehindLance
+    uniqueID: 309909339
     locked: 0
