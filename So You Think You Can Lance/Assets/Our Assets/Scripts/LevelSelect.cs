@@ -25,10 +25,14 @@ public class LevelSelect : MonoBehaviour {
 
     public void Select1_1()
     {
-        Application.LoadLevel("testScene");
+        Application.LoadLevel(1);
     }
     public void Select1_2()
     {
-        Application.LoadLevel("level2");
+        Application.LoadLevel(2);
+    }
+    public void SelectShop()
+    {
+        Application.LoadLevel(3);
     }
 }
