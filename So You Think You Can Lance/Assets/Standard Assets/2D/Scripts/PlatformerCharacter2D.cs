@@ -148,7 +148,7 @@ namespace UnitySampleAssets._2D
                         {
                             attacking = true;
                             attackTimer = 0;
-                            attackTrigger.gameObject.active = false;
+                            attackTrigger.gameObject.active = true;
                             attackTrigger.enabled = true;
 
                             GameObject.Find("Lance").GetComponent<Animator>().Play("Pierce");
