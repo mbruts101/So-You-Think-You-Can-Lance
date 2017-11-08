@@ -8,10 +8,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelFinish : MonoBehaviour {
-
+    private LevelManager lm;
 	// Use this for initialization
 	void Start () {
-		
+        lm = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
 	}
 	
 	// Update is called once per frame
@@ -22,6 +22,7 @@ public class LevelFinish : MonoBehaviour {
     {
         if(col.gameObject.tag == "Player")
         {
+            PlayerDataKeeper.setCoins(lm.coinsCollected);
             Application.LoadLevel(0);
         }
     }

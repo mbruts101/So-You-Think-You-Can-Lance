@@ -240,6 +240,7 @@
     <Compile Include="Assets\Our Assets\Scripts\LevelSelect.cs" />
     <Compile Include="Assets\Our Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Our Assets\Scripts\PlayerAttack.cs" />
+    <Compile Include="Assets\Our Assets\Scripts\PlayerDataKeeper.cs" />
     <Compile Include="Assets\Our Assets\Scripts\rockSpawn.cs" />
     <Compile Include="Assets\Our Assets\Scripts\Sink.cs" />
     <Compile Include="Assets\Our Assets\Scripts\treeTeleport.cs" />

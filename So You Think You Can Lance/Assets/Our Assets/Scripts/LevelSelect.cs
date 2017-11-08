@@ -6,12 +6,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour {
-
+    public Text coin;
 	// Use this for initialization
 	void Start () {
-		
+        coin.text = PlayerDataKeeper.getCoins().ToString();
 	}
 	
 	// Update is called once per frame
