@@ -65,6 +65,8 @@
      <Compile Include="Assets\Our Assets\Scripts\ShopScript.cs" />
      <Compile Include="Assets\Our Assets\Scripts\Sink.cs" />
      <Compile Include="Assets\Our Assets\Scripts\treeTeleport.cs" />
+     <Compile Include="Assets\rotate.cs" />
+     <Compile Include="Assets\runLeft.cs" />
      <None Include="Assets\Standard Assets\Effects\Projectors\ProjectorGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction (Pro Only)\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects (Pro Only)\Shaders\_BloomAndFlares\BlendOneOne.shader" />
