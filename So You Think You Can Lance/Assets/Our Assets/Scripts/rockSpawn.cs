@@ -5,6 +5,7 @@ using UnityEngine;
 public class rockSpawn : MonoBehaviour {
 
 	public GameObject g;
+	public bool isRolling = false;
 
 	// Use this for initialization
 	void Start () {
@@ -18,6 +19,15 @@ public class rockSpawn : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D c)
 	{
-		g.AddComponent<Rigidbody2D> ();
+		
+		if (isRolling) 
+		{
+			g.GetComponent<runLeft> ().enabled = true;
+			//g.GetComponent<rotate> ().enabled = true;
+		} 
+		else 
+		{
+			g.AddComponent<Rigidbody2D> ();
+		}
 	}
 }
