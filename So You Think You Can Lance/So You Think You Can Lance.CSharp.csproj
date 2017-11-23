@@ -231,7 +231,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BossPlayerController.cs" />
     <Compile Include="Assets\Our Assets\Scripts\AttackTrigger.cs" />
+    <Compile Include="Assets\Our Assets\Scripts\BossBehaviour.cs" />
     <Compile Include="Assets\Our Assets\Scripts\Collectable.cs" />
     <Compile Include="Assets\Our Assets\Scripts\EditorGrid.cs" />
     <Compile Include="Assets\Our Assets\Scripts\enemyScript.cs" />
@@ -245,6 +247,9 @@
     <Compile Include="Assets\Our Assets\Scripts\ShopScript.cs" />
     <Compile Include="Assets\Our Assets\Scripts\Sink.cs" />
     <Compile Include="Assets\Our Assets\Scripts\treeTeleport.cs" />
+    <Compile Include="Assets\Our Assets\Scripts\UserControlBoss.cs" />
+    <Compile Include="Assets\rotate.cs" />
+    <Compile Include="Assets\runLeft.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Note about Editor Folder.txt" />
