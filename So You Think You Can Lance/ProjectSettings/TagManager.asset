@@ -12,6 +12,7 @@ TagManager:
   - Chicken
   - Stabbable
   - Fire
+  - Lance
   layers:
   - Default
   - TransparentFX

@@ -231,10 +231,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\BossPlayerController.cs" />
     <Compile Include="Assets\Our Assets\Scripts\AttackTrigger.cs" />
     <Compile Include="Assets\Our Assets\Scripts\BossBehaviour.cs" />
+    <Compile Include="Assets\Our Assets\Scripts\BossPlayerController.cs" />
     <Compile Include="Assets\Our Assets\Scripts\Collectable.cs" />
+    <Compile Include="Assets\Our Assets\Scripts\DestroyAfterSeconds.cs" />
     <Compile Include="Assets\Our Assets\Scripts\EditorGrid.cs" />
     <Compile Include="Assets\Our Assets\Scripts\enemyScript.cs" />
     <Compile Include="Assets\Our Assets\Scripts\LevelFinish.cs" />
