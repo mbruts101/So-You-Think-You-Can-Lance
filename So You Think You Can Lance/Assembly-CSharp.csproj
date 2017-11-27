@@ -51,8 +51,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\cutScene1.cs" />
      <Compile Include="Assets\Our Assets\Scripts\AttackTrigger.cs" />
+     <Compile Include="Assets\Our Assets\Scripts\BossBehaviour.cs" />
+     <Compile Include="Assets\Our Assets\Scripts\BossPlayerController.cs" />
      <Compile Include="Assets\Our Assets\Scripts\Collectable.cs" />
+     <Compile Include="Assets\Our Assets\Scripts\DestroyAfterSeconds.cs" />
      <Compile Include="Assets\Our Assets\Scripts\EditorGrid.cs" />
      <Compile Include="Assets\Our Assets\Scripts\enemyScript.cs" />
      <Compile Include="Assets\Our Assets\Scripts\LevelFinish.cs" />
@@ -65,6 +69,7 @@
      <Compile Include="Assets\Our Assets\Scripts\ShopScript.cs" />
      <Compile Include="Assets\Our Assets\Scripts\Sink.cs" />
      <Compile Include="Assets\Our Assets\Scripts\treeTeleport.cs" />
+     <Compile Include="Assets\Our Assets\Scripts\UserControlBoss.cs" />
      <Compile Include="Assets\rotate.cs" />
      <Compile Include="Assets\runLeft.cs" />
      <None Include="Assets\Standard Assets\Effects\Projectors\ProjectorGuidelines.txt" />

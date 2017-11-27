@@ -1,11 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Our Assets/Scripts/AttackTrigger.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Our Assets/Scripts/rockSpawn.cs">
     <Files>
+      <File FileName="Assets/runLeft.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/2D/Scripts/Platformer2DUserControl.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/Cameras/Scripts/ProtectCameraFromWallClip.cs" Line="1" Column="1" />
-      <File FileName="Assets/Standard Assets/2D/Scripts/PlatformerCharacter2D.cs" Line="173" Column="17" />
+      <File FileName="Assets/Standard Assets/2D/Scripts/PlatformerCharacter2D.cs" Line="1" Column="1" />
       <File FileName="Assets/Our Assets/Scripts/AttackTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets/rotate.cs" Line="1" Column="1" />
+      <File FileName="Assets/Our Assets/Scripts/rockSpawn.cs" Line="26" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
