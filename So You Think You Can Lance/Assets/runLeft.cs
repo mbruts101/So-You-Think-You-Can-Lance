@@ -14,11 +14,11 @@ public class runLeft : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		rb.AddForce(10.0f * Vector2.left);
 	}
 
 	void FixedUpdate()
 	{
-		rb.AddForce(10.0f * Vector2.left);
+		
 	}
 }

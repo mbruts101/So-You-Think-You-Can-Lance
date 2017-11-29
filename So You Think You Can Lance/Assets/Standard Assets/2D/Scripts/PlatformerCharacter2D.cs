@@ -14,6 +14,7 @@ namespace UnitySampleAssets._2D
     public class PlatformerCharacter2D : MonoBehaviour
     {
         private bool facingRight = true; // For determining which way the player is currently facing.
+		public bool inCutscene = false;
 
         [SerializeField]
         private float maxSpeed = 10f; // The fastest the player can travel in the x axis.
@@ -74,7 +75,7 @@ namespace UnitySampleAssets._2D
         }
         void Update()
         {
-			if (rb.velocity.magnitude == 0) {
+			if (rb.velocity.magnitude == 0 && !inCutscene) {
 				frameCount++;
 				if (Time.timeSinceLevelLoad > 0 && reloadLevel && frameCount > 1) {
 					Debug.Log ("loading");

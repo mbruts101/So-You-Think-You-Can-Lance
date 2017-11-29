@@ -1,13 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnitySampleAssets._2D;
 
 public class cutScene1 : MonoBehaviour {
-	public GameObject lance; 
-	public GameObject bandit2;
+	public GameObject lance;
+	public GameObject hand;
+
+	private Vector3 endPosition;
+
 	// Use this for initialization
 	void Start () {
-		bandit2 = GameObject.Find ("Bandit2");
+		
 	}
 	
 	// Update is called once per frame
@@ -22,9 +26,23 @@ public class cutScene1 : MonoBehaviour {
 			col.gameObject.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionX;
 
 			col.gameObject.GetComponent<Animator> ().enabled = false;
+			GameObject.Find ("SirLance").GetComponent<PlatformerCharacter2D> ().inCutscene = true;
 
-			Debug.Log ("CUT SCENE");
-			bandit2.GetComponent<SpriteRenderer> ().flipX = true;
+			GameObject bandit = GameObject.Find ("BanditTurn");
+			bandit.transform.localRotation = Quaternion.Euler(0, 180, 0);
+			Transform temp = lance.transform;
+			bandit.transform.DetachChildren ();
+			lance.transform.position = temp.transform.position;
+			//lance.transform.position = new Vector2 (100, 100);
+			//GameObject.Find ("BanditTurn").transform.DetachChildren ();
+			//lance.transform.parent = GameObject.Find("Hand").transform;
+
+		
+
+			//lance.transform.position = endPosition;
+
+			//GameObject.Find ("SirLance").GetComponent<PlatformerCharacter2D> ().inCutscene = false;
 		}
 	}
+		
 }
