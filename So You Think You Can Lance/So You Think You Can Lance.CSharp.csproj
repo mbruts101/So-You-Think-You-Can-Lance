@@ -231,6 +231,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\cutScene1.cs" />
     <Compile Include="Assets\Our Assets\Scripts\AttackTrigger.cs" />
     <Compile Include="Assets\Our Assets\Scripts\BossBehaviour.cs" />
     <Compile Include="Assets\Our Assets\Scripts\BossPlayerController.cs" />
@@ -245,12 +246,13 @@
     <Compile Include="Assets\Our Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Our Assets\Scripts\PlayerDataKeeper.cs" />
     <Compile Include="Assets\Our Assets\Scripts\rockSpawn.cs" />
+    <Compile Include="Assets\Our Assets\Scripts\rotate.cs" />
+    <Compile Include="Assets\Our Assets\Scripts\runLeft.cs" />
+    <Compile Include="Assets\Our Assets\Scripts\ScrollingBackground.cs" />
     <Compile Include="Assets\Our Assets\Scripts\ShopScript.cs" />
     <Compile Include="Assets\Our Assets\Scripts\Sink.cs" />
     <Compile Include="Assets\Our Assets\Scripts\treeTeleport.cs" />
     <Compile Include="Assets\Our Assets\Scripts\UserControlBoss.cs" />
-    <Compile Include="Assets\rotate.cs" />
-    <Compile Include="Assets\runLeft.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Note about Editor Folder.txt" />
