@@ -96,7 +96,7 @@ public class cutScene1 : MonoBehaviour {
 		for (float i = 0f; i < 1f; i+= .01f)
 		{
 			bandit.transform.position = Vector3.Lerp(temp2,new Vector3(550f,11.73f,0f),i);
-			bandit.transform.Rotate (new Vector3(0f,i,0f));
+			bandit.transform.localRotation = Quaternion.Euler (0,0,-i*2*360);
 			yield return new WaitForSeconds (.005f);
 		}
 		yield return new WaitForSeconds (1);
