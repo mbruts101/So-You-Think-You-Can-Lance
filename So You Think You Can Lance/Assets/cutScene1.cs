@@ -26,17 +26,15 @@ public class cutScene1 : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Player") 
 		{
+			StartCoroutine (cinematicViewOn ());
 			col.gameObject.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionX;
 			col.gameObject.GetComponent<Rigidbody2D> ().freezeRotation = true;
 			col.gameObject.GetComponent<Animator> ().enabled = false;
 			GameObject.Find ("SirLance").GetComponent<PlatformerCharacter2D> ().inCutscene = true;
 
-			GameObject bandit = GameObject.Find ("BanditTurn");
-			bandit.transform.localRotation = Quaternion.Euler(0, 180, 0);
-			Transform temp = lance.transform;
 
-			bandit.transform.DetachChildren ();
-			StartCoroutine (cinematicViewOn ());
+	
+
 
 			//lance.transform.position = temp.transform.position;
 			//lance.transform.position = new Vector2 (100, 100);
@@ -51,6 +49,13 @@ public class cutScene1 : MonoBehaviour {
 		}
 	}
 
+	public void cutScene()
+	{
+		GameObject bandit = GameObject.Find ("BanditTurn");
+		bandit.transform.localRotation = Quaternion.Euler(0, 180, 0);
+		bandit.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0,100));
+	}
+
 	IEnumerator cinematicViewOn()
 	{
 		float scaleY = 1.55f;
@@ -61,14 +66,35 @@ public class cutScene1 : MonoBehaviour {
 			bottom.transform.localScale = new Vector3 (103, scaleY, 0);
 			scaleY += .02f;
 		}
+		GameObject bandit = GameObject.Find ("BanditTurn");
+		bandit.transform.localRotation = Quaternion.Euler(0, 180, 0);
+		yield return new WaitForSeconds (1);
+		bandit.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0,100));
+		bandit.transform.GetChild(0).GetComponent<Rigidbody2D>().AddForce(new Vector2(-10,10));
+		yield return new WaitForSeconds (1.5f);
 
+
+
+
+		GameObject g = GameObject.Find ("Chicken");
+		g.transform.localRotation = Quaternion.Euler(0, 180, 0);
+		Vector3 tempVector = g.transform.position;
+		for (float i = 0f; i < 1f; i+= .01f)
+		{
+			g.transform.position = Vector3.Lerp(tempVector,new Vector3(520f,11.73f,0f),i);
+			yield return new WaitForSeconds (.005f);
+		}
+
+		yield return new WaitForSeconds (5);
+		StartCoroutine (cinematicViewOff ());
 	}
 
-	public void cinematicViewOff()
+	IEnumerator cinematicViewOff()
 	{
 		float scaleY = 3;
 		while (scaleY > 1.55f) 
 		{
+			yield return new WaitForSeconds (.0001f);
 			top.transform.localScale = new Vector3 (103, scaleY, 0);
 			bottom.transform.localScale = new Vector3 (103, scaleY, 0);
 			scaleY -= .01f;

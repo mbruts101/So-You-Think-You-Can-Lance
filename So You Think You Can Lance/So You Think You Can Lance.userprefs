@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/cutScene1.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Assets/cutScene1.cs" Line="62" Column="17" />
+      <File FileName="Assets/cutScene1.cs" Line="1" Column="1" />
       <File FileName="Assets/runLeft.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/2D/Scripts/PlatformerCharacter2D.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/2D/Scripts/Platformer2DUserControl.cs" Line="1" Column="1" />

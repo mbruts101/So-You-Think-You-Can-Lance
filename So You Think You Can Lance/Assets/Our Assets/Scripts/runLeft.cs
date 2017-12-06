@@ -9,13 +9,24 @@ public class runLeft : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rb = this.GetComponent<Rigidbody2D> ();
+		StartCoroutine (force ());
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		rb.AddForce(10.0f * Vector2.left);
+		
 	}
+
+	IEnumerator force()
+	{
+		for (int i = 0; i < 100; i++) 
+		{
+			yield return new WaitForSeconds (.1f);
+			rb.AddForce (50.0f * Vector2.left);
+		}
+	}
+
 
 	void FixedUpdate()
 	{
