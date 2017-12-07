@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Destr : MonoBehaviour {
+public class DestroyAfterSeconds : MonoBehaviour {
     public float time;
 	// Use this for initialization
 	void Start () {

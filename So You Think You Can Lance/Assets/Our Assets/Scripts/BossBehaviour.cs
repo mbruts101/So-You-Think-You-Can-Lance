@@ -34,7 +34,7 @@ public class BossBehaviour : MonoBehaviour {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(Positions[0].position.x, transform.position.y), speed);
             yield return null;
         }
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         for(int i = 0; i < 6; i++)
         {
             GameObject fireballProjectile = (GameObject) Instantiate(fireball, FireballLaunchPosition);
