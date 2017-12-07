@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\cutScene1.cs" />
      <Compile Include="Assets\Cutscene2.cs" />
+     <Compile Include="Assets\level2.cs" />
      <Compile Include="Assets\Our Assets\Scripts\AttackTrigger.cs" />
      <Compile Include="Assets\Our Assets\Scripts\BossBehaviour.cs" />
      <Compile Include="Assets\Our Assets\Scripts\BossPlayerController.cs" />

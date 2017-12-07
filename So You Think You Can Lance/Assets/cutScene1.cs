@@ -27,7 +27,7 @@ public class cutScene1 : MonoBehaviour {
 		if (col.gameObject.tag == "Player") 
 		{
 			StartCoroutine (cinematicViewOn ());
-			col.gameObject.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePositionX;
+			col.gameObject.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.FreezePosition;
 			col.gameObject.GetComponent<Rigidbody2D> ().freezeRotation = true;
 			col.gameObject.GetComponent<Animator> ().enabled = false;
 			GameObject.Find ("SirLance").GetComponent<PlatformerCharacter2D> ().inCutscene = true;
@@ -113,6 +113,11 @@ public class cutScene1 : MonoBehaviour {
 
 	IEnumerator cinematicViewOff()
 	{
+		GameObject g = GameObject.Find ("SirLance");
+		g.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.None;
+		g.GetComponent<Rigidbody2D> ().freezeRotation = true;
+		g.GetComponent<Animator> ().enabled = true;
+	
 		float scaleY = 3;
 		while (scaleY > 1.55f) 
 		{
@@ -121,10 +126,6 @@ public class cutScene1 : MonoBehaviour {
 			bottom.transform.localScale = new Vector3 (103, scaleY, 0);
 			scaleY -= .01f;
 		}
-		GameObject g = GameObject.Find ("SirLance");
-		g.GetComponent<Rigidbody2D> ().constraints = RigidbodyConstraints2D.None;
-		g.GetComponent<Rigidbody2D> ().freezeRotation = true;
-		g.GetComponent<Animator> ().enabled = true;
 		g.GetComponent<PlatformerCharacter2D> ().inCutscene = false;
 	}
 
