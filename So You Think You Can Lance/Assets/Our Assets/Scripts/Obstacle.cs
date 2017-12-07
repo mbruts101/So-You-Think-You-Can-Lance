@@ -9,6 +9,8 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour {
 
+	public bool isProjectile = false;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -20,12 +22,15 @@ public class Obstacle : MonoBehaviour {
 	}
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.tag == "Player")
+		if(col.gameObject.tag == "Stabbable")
         {
             Destroy(col.gameObject);
-            
-            Application.LoadLevel(Application.loadedLevel);
         }
+
+		if (col.gameObject.tag == "Player" && isProjectile  == false) 
+		{
+			Application.LoadLevel(Application.loadedLevel);
+		}
     }
 
 	void OnTriggerEnter2D(Collider2D col)

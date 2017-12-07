@@ -38,6 +38,31 @@ public class PlayerAttack : MonoBehaviour
 
     }
 
+	IEnumerator chuck()
+	{
+		float i = 0f;
+		GameObject g = GameObject.Find("Lance");
+		Transform child = g.transform.GetChild (0);
+		Vector3 temp = g.transform.position;
+		child.parent = null;
+
+		while(i<=1)
+		{
+			yield return new WaitForSeconds(.01f);
+			child.position = Vector3.Lerp (temp, temp + new Vector3 (50f, 0f, 0f), i);
+			child.localRotation = Quaternion.Euler (0,0,-i*2*360);
+			i += .03f;
+			if (i > .1) 
+			{
+				child.gameObject.GetComponent<Obstacle> ().isProjectile = true;
+				child.gameObject.AddComponent<BoxCollider2D> ();
+			}
+		}
+
+		Destroy (child.gameObject);
+
+	}
+
     public void attack()
     {
         attacking = true;
@@ -50,6 +75,10 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.D) && !attacking)
         {
+			if (GameObject.Find ("Lance").transform.childCount != 0) 
+			{
+				StartCoroutine(chuck());
+			}
             attacking = true;
             attackTimer = 0;
             attackTrigger.gameObject.active = true;
