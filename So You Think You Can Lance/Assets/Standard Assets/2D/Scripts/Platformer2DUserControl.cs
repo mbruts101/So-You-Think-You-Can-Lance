@@ -8,13 +8,13 @@ using UnitySampleAssets.CrossPlatformInput;
 
 namespace UnitySampleAssets._2D
 {
-
+    
     [RequireComponent(typeof (PlatformerCharacter2D))]
     public class Platformer2DUserControl : MonoBehaviour
     {
         private PlatformerCharacter2D character;
         private bool jump;
-
+        public int running;
         private void Awake()
         {
             character = GetComponent<PlatformerCharacter2D>();
@@ -33,7 +33,7 @@ namespace UnitySampleAssets._2D
             //bool crouch = Input.GetKey(KeyCode.LeftControl);
             //float h = CrossPlatformInputManager.GetAxis("Horizontal");
             // Pass all parameters to the character control script.
-            character.Move(1, false, jump);
+            character.Move(running, false, jump);
             jump = false;
         }
     }

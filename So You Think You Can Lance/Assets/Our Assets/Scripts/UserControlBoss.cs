@@ -7,12 +7,12 @@ using UnitySampleAssets.CrossPlatformInput;
 public class UserControlBoss : MonoBehaviour
 {
   
-    private PlatformerCharacter2D character;
+    private BossPlayerController character;
     private bool jump;
 
     private void Awake()
     {
-        character = GetComponent<PlatformerCharacter2D>();
+        character = GetComponent<BossPlayerController>();
     }
 
     private void Update()
@@ -28,6 +28,7 @@ public class UserControlBoss : MonoBehaviour
         //bool crouch = Input.GetKey(KeyCode.LeftControl);
         //float h = CrossPlatformInputManager.GetAxis("Horizontal");
         // Pass all parameters to the character control script.
+        //character.Move(0, false, jump);
         jump = false;
     }
 }

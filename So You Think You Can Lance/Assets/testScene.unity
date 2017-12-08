@@ -6934,6 +6934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7527d5982a6ba7e4888b6dbdb9f724fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProjectile: 0
 --- !u!58 &160099424
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15382,7 +15383,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 395471186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 768, y: 335, z: 0}
+  m_LocalPosition: {x: 482.5, y: 255, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1743811300}
@@ -26439,6 +26440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7527d5982a6ba7e4888b6dbdb9f724fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProjectile: 0
 --- !u!58 &675611310
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29012,6 +29014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  running: 1
 --- !u!114 &751811115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29152,7 +29155,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 751811109}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 512, y: 7, z: 0}
+  m_LocalPosition: {x: -51.5, y: 7, z: 0}
   m_LocalScale: {x: 0.87707555, y: 0.8770747, z: 0.49509433}
   m_Children:
   - {fileID: 789800356}
@@ -34266,7 +34269,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 911397128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 688, y: 320, z: 0}
+  m_LocalPosition: {x: 402.5, y: 240, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 395471190}
@@ -41576,6 +41579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7527d5982a6ba7e4888b6dbdb9f724fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProjectile: 0
 --- !u!95 &1097130725
 Animator:
   serializedVersion: 3
@@ -49794,6 +49798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7527d5982a6ba7e4888b6dbdb9f724fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProjectile: 0
 --- !u!61 &1304981259
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -55269,6 +55274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7527d5982a6ba7e4888b6dbdb9f724fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProjectile: 0
 --- !u!1 &1460785797
 GameObject:
   m_ObjectHideFlags: 0
@@ -57026,6 +57032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7527d5982a6ba7e4888b6dbdb9f724fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProjectile: 0
 --- !u!61 &1489857367
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65483,6 +65490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7527d5982a6ba7e4888b6dbdb9f724fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProjectile: 0
 --- !u!61 &1670074562
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -68940,7 +68948,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1743811299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 562.3, y: 320.7, z: 0}
+  m_LocalPosition: {x: 276.8, y: 240.70001, z: 0}
   m_LocalScale: {x: 0.44397914, y: 0.44397938, z: 0.44397938}
   m_Children: []
   m_Father: {fileID: 395471190}
@@ -72949,6 +72957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7527d5982a6ba7e4888b6dbdb9f724fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProjectile: 0
 --- !u!58 &1850988010
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -73580,6 +73589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7527d5982a6ba7e4888b6dbdb9f724fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isProjectile: 0
 --- !u!58 &1868948066
 CircleCollider2D:
   m_ObjectHideFlags: 0

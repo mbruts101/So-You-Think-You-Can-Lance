@@ -37,8 +37,8 @@ public class BossBehaviour : MonoBehaviour {
         yield return new WaitForSeconds(1);
         for(int i = 0; i < 6; i++)
         {
-            GameObject fireballProjectile = (GameObject) Instantiate(fireball, FireballLaunchPosition);
-            fireballProjectile.GetComponent<Rigidbody2D>().velocity = Vector2.left * 5;
+            GameObject fireballProjectile = (GameObject) Instantiate(fireball, FireballLaunchPosition.position, Quaternion.identity);
+            fireballProjectile.GetComponent<Rigidbody2D>().velocity = Vector2.left * 15;
             yield return new WaitForSeconds(1);
         }
         //SecondAttack
@@ -56,7 +56,7 @@ public class BossBehaviour : MonoBehaviour {
         }
         for (int i = 0; i < 6; i++)
         {
-            GameObject eggProjectile = (GameObject)Instantiate(egg, EggLaunchPosition);
+            GameObject eggProjectile = (GameObject)Instantiate(egg, EggLaunchPosition.position, Quaternion.identity);
             eggProjectile.GetComponent<Rigidbody2D>().velocity = Vector2.down * 5;
             yield return new WaitForSeconds(1);
         }
@@ -79,6 +79,7 @@ public class BossBehaviour : MonoBehaviour {
         if(col.collider.tag == "Lance")
         {
             health = health - 1;
+            speed = speed * 2;
         }
     }
 }

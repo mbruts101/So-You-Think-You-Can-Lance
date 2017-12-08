@@ -786,7 +786,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 395471186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 797, y: 335, z: 0}
+  m_LocalPosition: {x: 482.5, y: 255, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1743811300}
@@ -1635,7 +1635,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 911397128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 717, y: 320, z: 0}
+  m_LocalPosition: {x: 402.5, y: 240, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 395471190}
@@ -2880,6 +2880,11 @@ Prefab:
       propertyPath: m_Name
       value: Sir Lance
       objectReference: {fileID: 0}
+    - target: {fileID: 114719300765671446, guid: 18d5de77e9ffd490cb725a7be78a4584,
+        type: 2}
+      propertyPath: running
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 18d5de77e9ffd490cb725a7be78a4584, type: 2}
   m_IsPrefabParent: 0
@@ -3231,7 +3236,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1743811299}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 591.3, y: 320.7, z: 0}
+  m_LocalPosition: {x: 276.8, y: 240.70001, z: 0}
   m_LocalScale: {x: 0.44397914, y: 0.44397938, z: 0.44397938}
   m_Children: []
   m_Father: {fileID: 395471190}
