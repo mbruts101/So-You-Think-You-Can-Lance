@@ -11,8 +11,12 @@ public class BossBehaviour : MonoBehaviour {
     public GameObject egg;
     public int health = 3;
     public bool dead = false;
+    public Animator anim;
+    public SpriteRenderer spr;
     // Use this for initialization
     void Start () {
+        anim = GetComponent<Animator>();
+        spr = GetComponent<SpriteRenderer>();
         StartCoroutine("BossPattern");
 	}
 	
@@ -37,10 +41,16 @@ public class BossBehaviour : MonoBehaviour {
         yield return new WaitForSeconds(1);
         for(int i = 0; i < 6; i++)
         {
+            anim.SetBool("Attacking", true);
+            yield return new WaitForSeconds(0.5f);
             GameObject fireballProjectile = (GameObject) Instantiate(fireball, FireballLaunchPosition.position, Quaternion.identity);
             fireballProjectile.GetComponent<Rigidbody2D>().velocity = Vector2.left * 15;
             yield return new WaitForSeconds(1);
+            anim.SetBool("Attacking", false);
+            yield return new WaitForSeconds(1);
+            
         }
+        anim.SetBool("Attacking", false);
         //SecondAttack
         GetComponent<Rigidbody2D>().isKinematic = true;
         while(transform.position != Positions[1].position)
