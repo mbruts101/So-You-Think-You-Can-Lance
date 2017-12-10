@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\cutScene1.cs" />
      <Compile Include="Assets\Cutscene2.cs" />
+     <Compile Include="Assets\Follow.cs" />
      <Compile Include="Assets\level2.cs" />
      <Compile Include="Assets\Our Assets\Scripts\AttackTrigger.cs" />
      <Compile Include="Assets\Our Assets\Scripts\BossBehaviour.cs" />
@@ -75,6 +76,7 @@
      <Compile Include="Assets\Our Assets\Scripts\Sink.cs" />
      <Compile Include="Assets\Our Assets\Scripts\treeTeleport.cs" />
      <Compile Include="Assets\Our Assets\Scripts\UserControlBoss.cs" />
+     <Compile Include="Assets\Projectile.cs" />
      <None Include="Assets\Standard Assets\Effects\Projectors\ProjectorGuidelines.txt" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction (Pro Only)\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects (Pro Only)\Shaders\_BloomAndFlares\BlendOneOne.shader" />

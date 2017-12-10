@@ -36,10 +36,11 @@ public class AttackTrigger : MonoBehaviour {
 	IEnumerator Stab(Collider2D col) 
 	{
 		yield return new WaitForSeconds (.05f);
-		var v = GameObject.Find ("Lance");
+		var v = GameObject.Find ("LanceEmpty");
 		Destroy (col.gameObject.GetComponent<Rigidbody2D> ());
 		col.gameObject.GetComponent<Animator> ().enabled = false;
 		col.gameObject.GetComponent<runLeft> ().enabled = false;
 		col.gameObject.transform.SetParent(v.transform);
+		col.gameObject.GetComponent<Projectile> ().enabled = true;
 	}
 }

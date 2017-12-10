@@ -42,11 +42,12 @@ public class PlayerAttack : MonoBehaviour
 	IEnumerator chuck()
 	{
 		float i = 0f;
-		GameObject g = GameObject.Find("Lance");
+		GameObject g = GameObject.Find("LanceEmpty");
 		Transform child = g.transform.GetChild (0);
 		Vector3 temp = g.transform.position;
-		child.parent = null;
 
+
+		child.parent = null;
 		while(i<=1)
 		{
 			yield return new WaitForSeconds(.01f);
@@ -57,8 +58,9 @@ public class PlayerAttack : MonoBehaviour
                 i += .03f;
                 if (i > .1)
                 {
-                    child.gameObject.GetComponent<Obstacle>().isProjectile = true;
-                    child.gameObject.AddComponent<BoxCollider2D>();
+					child.gameObject.GetComponent<Obstacle> ().enabled = false;
+					child.gameObject.AddComponent<BoxCollider2D>();
+
                 }
             }
 		}
@@ -79,7 +81,7 @@ public class PlayerAttack : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.D) && !attacking)
         {
-			if (GameObject.Find ("Lance").transform.childCount != 0) 
+			if (GameObject.Find ("LanceEmpty").transform.childCount != 0) 
 			{
 				StartCoroutine(chuck());
 			}

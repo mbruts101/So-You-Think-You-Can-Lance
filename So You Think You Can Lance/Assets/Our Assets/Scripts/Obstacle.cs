@@ -10,8 +10,6 @@ using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour {
 
-	public bool isProjectile = false;
-
 	// Use this for initialization
 	void Start () {
 		
@@ -24,14 +22,13 @@ public class Obstacle : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
-		if(col.gameObject.tag == "Stabbable")
-        {
-            Destroy(col.gameObject);
-        }
-		else if (col.gameObject.tag == "Player" && isProjectile  == false) 
+		if(col.gameObject.tag == "Player") 
 		{
+			Debug.Log (col.gameObject.name);
+			Destroy (col.gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+
     }
 
 }
