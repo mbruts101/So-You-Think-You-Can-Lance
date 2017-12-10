@@ -118,6 +118,7 @@ public class cutScene1 : MonoBehaviour {
 		g.GetComponent<Rigidbody2D> ().freezeRotation = true;
 		g.GetComponent<Animator> ().enabled = true;
 	
+		/*
 		float scaleY = 3;
 		while (scaleY > 1.55f) 
 		{
@@ -126,6 +127,8 @@ public class cutScene1 : MonoBehaviour {
 			bottom.transform.localScale = new Vector3 (103, scaleY, 0);
 			scaleY -= .01f;
 		}
+		*/
+		yield return new WaitForSeconds (.0001f);
 		g.GetComponent<PlatformerCharacter2D> ().inCutscene = false;
 	}
 
