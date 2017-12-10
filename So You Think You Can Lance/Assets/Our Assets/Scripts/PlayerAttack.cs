@@ -20,6 +20,8 @@ public class PlayerAttack : MonoBehaviour
     public Collider2D upAttackTrigger;
     private Animator anim;
     public GameObject Player;
+	public bool projectileHit = false;
+	public bool hasBeenFlung = false;
 
 
     // Use this for initialization
@@ -41,6 +43,7 @@ public class PlayerAttack : MonoBehaviour
 
 	IEnumerator chuck()
 	{
+		hasBeenFlung = true;
 		float i = 0f;
 		GameObject g = GameObject.Find("LanceEmpty");
 		Transform child = g.transform.GetChild (0);
@@ -51,9 +54,12 @@ public class PlayerAttack : MonoBehaviour
 		while(i<=1)
 		{
 			yield return new WaitForSeconds(.01f);
-            if (child != null)
+			if (child != null)
             {
-                child.position = Vector3.Lerp(temp, temp + new Vector3(50f, 0f, 0f), i);
+				if (projectileHit == false)
+				{
+					child.position = Vector3.Lerp (temp, temp + new Vector3 (50f, 0f, 0f), i);
+				} 
                 child.localRotation = Quaternion.Euler(0, 0, -i * 2 * 360);
                 i += .03f;
                 if (i > .1)
@@ -64,9 +70,14 @@ public class PlayerAttack : MonoBehaviour
                 }
             }
 		}
-
+		yield return new WaitForSeconds(2f);
 		Destroy (child.gameObject);
-
+		hasBeenFlung = false;
+	}
+		
+	public void toggleProjectileHit()
+	{
+		projectileHit = true;
 	}
 
     public void attack()
@@ -83,7 +94,10 @@ public class PlayerAttack : MonoBehaviour
         {
 			if (GameObject.Find ("LanceEmpty").transform.childCount != 0) 
 			{
-				StartCoroutine(chuck());
+				if (hasBeenFlung == false) 
+				{
+					StartCoroutine (chuck ());
+				}
 			}
             attacking = true;
             attackTimer = 0;

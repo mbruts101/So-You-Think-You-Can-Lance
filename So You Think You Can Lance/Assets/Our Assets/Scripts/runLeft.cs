@@ -20,13 +20,10 @@ public class runLeft : MonoBehaviour {
 
 	IEnumerator force()
 	{
-		for (int i = 0; i < 100; i++) 
+		while(this.GetComponent<Projectile>().enabled == false)
 		{
-			yield return new WaitForSeconds (.1f);
-            if (rb != null)
-            {
-                rb.AddForce(50.0f * Vector2.left);
-            }
+			yield return new WaitForSeconds (.01f);
+			this.transform.position = new Vector3 (this.transform.position.x - speed, this.transform.position.y, 0f);
 		}
 	}
 
