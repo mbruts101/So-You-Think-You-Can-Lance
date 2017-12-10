@@ -172,6 +172,7 @@ namespace UnitySampleAssets._2D
 
                 }
             }
+            /*
             if (Input.GetKeyDown(KeyCode.D) && !attacking)
             {
                 attacking = true;
@@ -182,6 +183,7 @@ namespace UnitySampleAssets._2D
                 GameObject.Find("Lance").GetComponent<Animator>().Play("Pierce");
 
             }
+            */
             if (attacking)
             {
 

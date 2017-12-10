@@ -25,7 +25,6 @@ public class PlayerAttack : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-
         anim = gameObject.GetComponent<Animator>();
         attackTrigger.enabled = false;
         
@@ -33,6 +32,8 @@ public class PlayerAttack : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
 
     }
+
+
     void Start()
     {
 
@@ -49,14 +50,17 @@ public class PlayerAttack : MonoBehaviour
 		while(i<=1)
 		{
 			yield return new WaitForSeconds(.01f);
-			child.position = Vector3.Lerp (temp, temp + new Vector3 (50f, 0f, 0f), i);
-			child.localRotation = Quaternion.Euler (0,0,-i*2*360);
-			i += .03f;
-			if (i > .1) 
-			{
-				child.gameObject.GetComponent<Obstacle> ().isProjectile = true;
-				child.gameObject.AddComponent<BoxCollider2D> ();
-			}
+            if (child != null)
+            {
+                child.position = Vector3.Lerp(temp, temp + new Vector3(50f, 0f, 0f), i);
+                child.localRotation = Quaternion.Euler(0, 0, -i * 2 * 360);
+                i += .03f;
+                if (i > .1)
+                {
+                    child.gameObject.GetComponent<Obstacle>().isProjectile = true;
+                    child.gameObject.AddComponent<BoxCollider2D>();
+                }
+            }
 		}
 
 		Destroy (child.gameObject);

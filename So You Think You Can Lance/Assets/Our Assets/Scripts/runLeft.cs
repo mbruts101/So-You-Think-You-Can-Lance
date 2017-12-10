@@ -23,7 +23,10 @@ public class runLeft : MonoBehaviour {
 		for (int i = 0; i < 100; i++) 
 		{
 			yield return new WaitForSeconds (.1f);
-			rb.AddForce (50.0f * Vector2.left);
+            if (rb != null)
+            {
+                rb.AddForce(50.0f * Vector2.left);
+            }
 		}
 	}
 
