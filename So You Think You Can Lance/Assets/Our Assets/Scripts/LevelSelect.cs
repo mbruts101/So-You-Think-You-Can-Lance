@@ -35,4 +35,8 @@ public class LevelSelect : MonoBehaviour {
     {
         Application.LoadLevel(3);
     }
+    public void SelectBoss()
+    {
+        Application.LoadLevel(4);
+    }
 }

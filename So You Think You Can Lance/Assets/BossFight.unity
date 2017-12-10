@@ -604,10 +604,11 @@ MonoBehaviour:
   fireball: {fileID: 1521250781110536, guid: c2fa4d6b4812dbe4f8ad096b32ecdef9, type: 2}
   EggLaunchPosition: {fileID: 1813872212}
   egg: {fileID: 1831089516469054, guid: 902f4e1a514d47140a34572d4b8646d4, type: 2}
-  health: 3
+  health: 18
   dead: 0
   anim: {fileID: 0}
   spr: {fileID: 0}
+  fireSpeed: 15
 --- !u!95 &1070770556
 Animator:
   serializedVersion: 3
@@ -889,6 +890,8 @@ MonoBehaviour:
   attackTrigger: {fileID: 1808406126}
   upAttackTrigger: {fileID: 1120746519}
   Player: {fileID: 0}
+  projectileHit: 0
+  hasBeenFlung: 0
 --- !u!82 &1123881014
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1757,7 +1760,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1813872211}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.05, y: 16, z: 0}
+  m_LocalPosition: {x: -13.53, y: 16, z: 5.26}
   m_LocalScale: {x: 3.4945474, y: 3.4945464, z: 3.4945464}
   m_Children: []
   m_Father: {fileID: 0}

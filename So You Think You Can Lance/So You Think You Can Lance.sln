@@ -1,13 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance", "Assembly-CSharp-firstpass.csproj", "{3BF6A5C5-73C1-1DBE-FBEA-0FEC63CB16ED}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance.CSharp.Plugins", "So You Think You Can Lance.CSharp.Plugins.csproj", "{FAEAE291-9802-1A02-54EA-80BE2861879A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance", "Assembly-CSharp.csproj", "{BCE2904F-4254-68B1-158A-4170D3D44D5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance.CSharp", "So You Think You Can Lance.CSharp.csproj", "{DB44DA63-7880-52A1-68E6-7D0EA848EC2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance", "Assembly-CSharp-Editor.csproj", "{01864E85-4F04-2A35-4FCA-3A7E3A1AF2C4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance", "Assembly-CSharp-Editor-firstpass.csproj", "{AB0321A3-53CC-1352-3E62-F424A4928BB9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "So You Think You Can Lance.CSharp.Editor", "So You Think You Can Lance.CSharp.Editor.csproj", "{9A777F8C-BF01-A93F-D06D-F0A08122C51C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,27 +13,20 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3BF6A5C5-73C1-1DBE-FBEA-0FEC63CB16ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3BF6A5C5-73C1-1DBE-FBEA-0FEC63CB16ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3BF6A5C5-73C1-1DBE-FBEA-0FEC63CB16ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3BF6A5C5-73C1-1DBE-FBEA-0FEC63CB16ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BCE2904F-4254-68B1-158A-4170D3D44D5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BCE2904F-4254-68B1-158A-4170D3D44D5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BCE2904F-4254-68B1-158A-4170D3D44D5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BCE2904F-4254-68B1-158A-4170D3D44D5B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{01864E85-4F04-2A35-4FCA-3A7E3A1AF2C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{01864E85-4F04-2A35-4FCA-3A7E3A1AF2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{01864E85-4F04-2A35-4FCA-3A7E3A1AF2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{01864E85-4F04-2A35-4FCA-3A7E3A1AF2C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AB0321A3-53CC-1352-3E62-F424A4928BB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AB0321A3-53CC-1352-3E62-F424A4928BB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AB0321A3-53CC-1352-3E62-F424A4928BB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AB0321A3-53CC-1352-3E62-F424A4928BB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAEAE291-9802-1A02-54EA-80BE2861879A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAEAE291-9802-1A02-54EA-80BE2861879A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAEAE291-9802-1A02-54EA-80BE2861879A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAEAE291-9802-1A02-54EA-80BE2861879A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB44DA63-7880-52A1-68E6-7D0EA848EC2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB44DA63-7880-52A1-68E6-7D0EA848EC2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB44DA63-7880-52A1-68E6-7D0EA848EC2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB44DA63-7880-52A1-68E6-7D0EA848EC2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A777F8C-BF01-A93F-D06D-F0A08122C51C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A777F8C-BF01-A93F-D06D-F0A08122C51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A777F8C-BF01-A93F-D06D-F0A08122C51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A777F8C-BF01-A93F-D06D-F0A08122C51C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal

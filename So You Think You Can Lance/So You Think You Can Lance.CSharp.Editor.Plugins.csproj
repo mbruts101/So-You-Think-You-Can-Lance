@@ -309,7 +309,6 @@
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects (Pro Only)\Editor\Water (Pro Only)\WaterBaseEditor.cs" />
     <Compile Include="Assets\Standard Assets\Effects\ImageEffects (Pro Only)\Editor\Water (Pro Only)\WaterEditorUtility.cs" />
     <Compile Include="Assets\Standard Assets\Effects\LightShafts\Editor\LightShaftsEditor.cs" />
-    <Compile Include="Assets\Standard Assets\Vehicles\Car\Scripts\Editor\WheelEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Note about Editor Folder.txt" />
@@ -419,13 +418,6 @@
     <None Include="Assets\Standard Assets\Environment\Water (Pro Only)\Shaders\FXWaterV4Pro.shader" />
     <None Include="Assets\Standard Assets\Environment\Water (Pro Only)\Shaders\FXWaterV4Simple.shader" />
     <None Include="Assets\Standard Assets\Environment\Water (Pro Only)\Shaders\WaterInclude.cginc" />
-    <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
-    <None Include="Assets\Standard Assets\Vehicles\Aircraft\AircraftGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Vehicles\Car\CarGuidelines.txt" />
-    <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
-    <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
-    <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
-    <None Include="Assets\Standard Assets\Vehicles\RollerBall\RollerBallGuidelines.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

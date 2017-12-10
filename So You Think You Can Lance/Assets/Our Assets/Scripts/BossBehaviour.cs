@@ -9,10 +9,11 @@ public class BossBehaviour : MonoBehaviour {
     public GameObject fireball;
     public Transform EggLaunchPosition;
     public GameObject egg;
-    public int health = 3;
+    public int health = 18;
     public bool dead = false;
     public Animator anim;
     public SpriteRenderer spr;
+    public int fireSpeed = 15;
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
@@ -46,7 +47,7 @@ public class BossBehaviour : MonoBehaviour {
                 anim.SetBool("Attacking", true);
                 yield return new WaitForSeconds(0.5f);
                 GameObject fireballProjectile = (GameObject)Instantiate(fireball, FireballLaunchPosition.position, Quaternion.identity);
-                fireballProjectile.GetComponent<Rigidbody2D>().velocity = Vector2.left * 15;
+                fireballProjectile.GetComponent<Rigidbody2D>().velocity = Vector2.left * fireSpeed;
                 yield return new WaitForSeconds(1);
                 anim.SetBool("Attacking", false);
                 yield return new WaitForSeconds(1);
@@ -70,7 +71,7 @@ public class BossBehaviour : MonoBehaviour {
             {
                 GameObject eggProjectile = (GameObject)Instantiate(egg, EggLaunchPosition.position, Quaternion.identity);
                 eggProjectile.GetComponent<Rigidbody2D>().velocity = Vector2.down * 5;
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(2);
             }
             //Time For the Player to Attack
             while (transform.position != Positions[3].position)
@@ -89,10 +90,20 @@ public class BossBehaviour : MonoBehaviour {
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.collider.tag == "Lance")
+        if(col.gameObject.tag == "Stabbable)")
         {
+            Destroy(col.gameObject);
             health = health - 1;
-            speed = speed * 2;
+            if(health == 12)
+            {
+                speed = speed * 2;
+                fireSpeed = 20;
+            }
+            if (health == 6)
+            {
+                speed = speed * 2;
+                fireSpeed = 25;
+            }
         }
     }
 }
