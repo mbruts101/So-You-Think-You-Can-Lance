@@ -9,12 +9,18 @@ public class startLevel : MonoBehaviour {
 
 	void Start () 
 	{
-		center.GetComponent<Image> ().CrossFadeAlpha (0f, 5f, true);
+		StartCoroutine (fade ());
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	IEnumerator fade()
+	{
+		yield return new WaitForSeconds (.6f);
+		center.GetComponent<Image> ().CrossFadeAlpha (0f, 5f, true);
 	}
 
 }

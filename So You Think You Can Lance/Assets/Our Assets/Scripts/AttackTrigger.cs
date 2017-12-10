@@ -38,12 +38,14 @@ public class AttackTrigger : MonoBehaviour {
 		yield return new WaitForSeconds (.05f);
 		var v = GameObject.Find ("LanceEmpty");
 		Destroy (col.gameObject.GetComponent<Rigidbody2D> ());
-        if(col.gameObject.name == "Egg(Clone")
-        {
-            col.gameObject.GetComponent<Animator>().enabled = false;
-            col.gameObject.GetComponent<runLeft>().enabled = false;
-        }
 		col.gameObject.transform.SetParent(v.transform);
 		col.gameObject.GetComponent<Projectile> ().enabled = true;
+
+		if(col.gameObject.name != "Egg(Clone)")
+		{
+			col.gameObject.GetComponent<Animator>().enabled = false;
+			col.gameObject.GetComponent<runLeft>().enabled = false;
+		}
+
 	}
 }
