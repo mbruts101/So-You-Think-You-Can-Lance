@@ -112,6 +112,47 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &32237284
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 32237285}
+  - component: {fileID: 32237286}
+  m_Layer: 0
+  m_Name: LanceEmpty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &32237285
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32237284}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -41.625885, y: 9.100791, z: -3.1203}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &32237286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 32237284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 364dbdbf4bc8c432e9149406095b5bb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lance: {fileID: 1808406125}
 --- !u!1 &248088809
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,7 +235,7 @@ Transform:
   m_GameObject: {fileID: 248088809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.7, y: -1.51, z: 23.007545}
-  m_LocalScale: {x: 50.16009, y: 9.624373, z: 1}
+  m_LocalScale: {x: 51.41408, y: 9.624373, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -491,7 +532,7 @@ Transform:
   m_GameObject: {fileID: 1008771675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.9, y: 11.2, z: 25.1}
-  m_LocalScale: {x: 40.812218, y: 15.831565, z: 17.590616}
+  m_LocalScale: {x: 52.035576, y: 15.831565, z: 17.590616}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8

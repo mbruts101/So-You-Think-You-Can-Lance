@@ -233,6 +233,7 @@
   <ItemGroup>
     <Compile Include="Assets\cutScene1.cs" />
     <Compile Include="Assets\Cutscene2.cs" />
+    <Compile Include="Assets\Follow.cs" />
     <Compile Include="Assets\level2.cs" />
     <Compile Include="Assets\Our Assets\Scripts\AttackTrigger.cs" />
     <Compile Include="Assets\Our Assets\Scripts\BossBehaviour.cs" />
@@ -247,6 +248,7 @@
     <Compile Include="Assets\Our Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Our Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Our Assets\Scripts\PlayerDataKeeper.cs" />
+    <Compile Include="Assets\Our Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Our Assets\Scripts\rockSpawn.cs" />
     <Compile Include="Assets\Our Assets\Scripts\rotate.cs" />
     <Compile Include="Assets\Our Assets\Scripts\runLeft.cs" />
