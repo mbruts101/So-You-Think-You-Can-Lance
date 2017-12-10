@@ -172,18 +172,18 @@ namespace UnitySampleAssets._2D
 
                 }
             }
-            /*
-            if (Input.GetKeyDown(KeyCode.D) && !attacking)
+            
+            if (Input.GetKeyDown(KeyCode.W) && !attacking)
             {
                 attacking = true;
                 attackTimer = 0;
                 attackTrigger.gameObject.active = true;
                 attackTrigger.enabled = true;
 
-                GameObject.Find("Lance").GetComponent<Animator>().Play("Pierce");
+                GameObject.Find("Lance").GetComponent<Animator>().Play("Up");
 
             }
-            */
+            
             if (attacking)
             {
 
