@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\activateRock.cs" />
      <Compile Include="Assets\BigCollectable.cs" />
+     <Compile Include="Assets\buttonPress.cs" />
      <Compile Include="Assets\CameraFollow.cs" />
      <Compile Include="Assets\cutScene1.cs" />
      <Compile Include="Assets\Cutscene2.cs" />
@@ -84,6 +85,8 @@
      <Compile Include="Assets\shieldScript.cs" />
      <Compile Include="Assets\startBandit.cs" />
      <Compile Include="Assets\startLevel.cs" />
+     <Compile Include="Assets\throwShuriken.cs" />
+     <Compile Include="Assets\unlockButtonCutscene.cs" />
      <Compile Include="Assets\waterDeath.cs" />
      <None Include="Assets\Standard Assets\Environment\Water (Pro Only)\Shaders\FXWaterV4Simple.shader" />
      <None Include="Assets\Standard Assets\Environment\Skyboxes\SkyboxGuidelines.txt" />

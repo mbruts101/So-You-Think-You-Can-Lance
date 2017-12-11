@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class runLeft : MonoBehaviour {
 	public float speed;
@@ -20,16 +21,16 @@ public class runLeft : MonoBehaviour {
 
 	IEnumerator force()
 	{
+		int i = 0;
 		while(this.GetComponent<Projectile>().enabled == false)
 		{
 			yield return new WaitForSeconds (.01f);
 			this.transform.position = new Vector3 (this.transform.position.x - speed, this.transform.position.y, 0f);
+			if (this.gameObject.name == "Shuriken") 
+			{
+				this.transform.localRotation = Quaternion.Euler(0f,0f,i*3);
+			}
+			i++;
 		}
-	}
-
-
-	void FixedUpdate()
-	{
-		
 	}
 }

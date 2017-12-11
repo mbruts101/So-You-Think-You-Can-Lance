@@ -48,6 +48,7 @@ public class AttackTrigger : MonoBehaviour {
 		Destroy (col.gameObject.GetComponent<Rigidbody2D> ());
 		col.gameObject.transform.SetParent(v.transform);
 		col.gameObject.GetComponent<Projectile> ().enabled = true;
+		col.gameObject.GetComponent<Obstacle> ().enabled = false;
 
 		if(col.gameObject.name != "Egg(Clone)")
 		{
