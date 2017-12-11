@@ -93,6 +93,10 @@ public class cutScene1 : MonoBehaviour {
 		bandit.transform.parent = null;
 		bandit.transform.position = GameObject.Find ("Hand").transform.position;
 		Vector3 temp2 = bandit.transform.position;
+
+
+
+
 		for (float i = 0f; i < 1f; i+= .01f)
 		{
 			bandit.transform.position = Vector3.Lerp(temp2,new Vector3(550f,11.73f,0f),i);
