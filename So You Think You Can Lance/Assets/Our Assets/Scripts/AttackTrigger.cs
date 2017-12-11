@@ -23,13 +23,21 @@ public class AttackTrigger : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
+		if (col.gameObject.tag == "Shield") 
+		{
+			Destroy (this.gameObject);
+		}
+
 		if (col.gameObject.tag == "Stabbable")
 		{
-			chickenDeath.Play ();
-			col.enabled = false;
-			StartCoroutine (Stab(col));
-			//col.gameObject.transform.SetParent(v.transform);
-			chickenDeath.Play ();
+			if (col.gameObject.transform.childCount == 0) 
+			{
+				chickenDeath.Play ();
+				col.enabled = false;
+				StartCoroutine (Stab (col));
+				//col.gameObject.transform.SetParent(v.transform);
+				chickenDeath.Play ();
+			}
 		}
     }
 
