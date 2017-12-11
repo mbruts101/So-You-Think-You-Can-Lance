@@ -4,16 +4,23 @@
     <Files>
       <File FileName="Assets/Standard Assets/2D/Scripts/Platformer2DUserControl.cs" Line="1" Column="1" />
       <File FileName="Assets/Standard Assets/Cameras/Scripts/ProtectCameraFromWallClip.cs" Line="1" Column="1" />
-      <File FileName="Assets/Our Assets/Scripts/AttackTrigger.cs" Line="49" Column="3" />
-      <File FileName="Assets/Our Assets/Scripts/Obstacle.cs" Line="11" Column="1" />
-      <File FileName="Assets/level2.cs" Line="4" Column="1" />
-      <File FileName="Assets/Our Assets/Scripts/PlayerAttack.cs" Line="73" Column="36" />
-      <File FileName="Assets/Follow.cs" Line="15" Column="1" />
-      <File FileName="Assets/Standard Assets/2D/Scripts/PlatformerCharacter2D.cs" Line="183" Column="75" />
-      <File FileName="Assets/cutScene1.cs" Line="131" Column="44" />
-      <File FileName="Assets/startLevel.cs" Line="22" Column="38" />
-      <File FileName="Assets/Our Assets/Scripts/Projectile.cs" Line="37" Column="103" />
-      <File FileName="Assets/Our Assets/Scripts/runLeft.cs" Line="25" Column="39" />
+      <File FileName="Assets/Our Assets/Scripts/AttackTrigger.cs" Line="28" Column="30" />
+      <File FileName="Assets/Our Assets/Scripts/Obstacle.cs" Line="29" Column="13" />
+      <File FileName="Assets/level2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Our Assets/Scripts/PlayerAttack.cs" Line="44" Column="2" />
+      <File FileName="Assets/Follow.cs" Line="15" Column="3" />
+      <File FileName="Assets/Standard Assets/2D/Scripts/PlatformerCharacter2D.cs" Line="1" Column="1" />
+      <File FileName="Assets/cutScene1.cs" Line="97" Column="3" />
+      <File FileName="Assets/startLevel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Our Assets/Scripts/Projectile.cs" Line="20" Column="3" />
+      <File FileName="Assets/Our Assets/Scripts/runLeft.cs" Line="1" Column="1" />
+      <File FileName="Assets/waterDeath.cs" Line="44" Column="38" />
+      <File FileName="Assets/CameraFollow.cs" Line="15" Column="3" />
+      <File FileName="Assets/Our Assets/Scripts/Sink.cs" Line="1" Column="1" />
+      <File FileName="Assets/Our Assets/Scripts/Collectable.cs" Line="1" Column="1" />
+      <File FileName="Assets/BigCollectable.cs" Line="36" Column="1" />
+      <File FileName="Assets/startBandit.cs" Line="23" Column="46" />
+      <File FileName="Assets/shieldScript.cs" Line="21" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
