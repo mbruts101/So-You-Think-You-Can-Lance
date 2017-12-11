@@ -33,7 +33,7 @@ public class buttonPress : MonoBehaviour {
 			yield return new WaitForSeconds (.5f);
 			door.transform.position = new Vector3 (door.transform.position.x, door.transform.position.y - i, 0f);
 		}
-		yield return new WaitForSeconds (3f);
+		yield return new WaitForSeconds (1f);
 		this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y - .25f, 0f);
 
 		GameObject g = GameObject.Find ("Sir Lance");

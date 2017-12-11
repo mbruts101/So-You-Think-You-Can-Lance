@@ -4,6 +4,7 @@ using UnityEngine;
 using UnitySampleAssets._2D;
 
 public class unlockButtonCutscene : MonoBehaviour {
+	private bool pressed = false;
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +18,9 @@ public class unlockButtonCutscene : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.gameObject.tag == "Player") 
+		if (col.gameObject.tag == "Player" && pressed == false) 
 		{
+			pressed = true;
 			GameObject.Find ("Sir Lance").GetComponent<PlatformerCharacter2D> ().inCutscene = true;
 			Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D> ();
 			rb.constraints = RigidbodyConstraints2D.FreezePositionX|RigidbodyConstraints2D.FreezeRotation;
