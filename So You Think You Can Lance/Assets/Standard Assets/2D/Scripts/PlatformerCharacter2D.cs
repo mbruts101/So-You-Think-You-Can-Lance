@@ -130,11 +130,15 @@ namespace UnitySampleAssets._2D
                     if (swipeDistVertical > minSwipeDistY)
                     {
                         float swipeValue = Mathf.Sign(touch.position.y - startSwipePos.y);
-                        if (swipeValue > 0)
+                        if (swipeValue > 0 && !attacking)
                         {
                             attacking = true;
                             attackTimer = 0;
-                            upAttackTrigger.enabled = true;
+                            attackTrigger.gameObject.active = true;
+                            attackTrigger.enabled = true;
+
+                            GameObject.Find("Lance").GetComponent<Animator>().Play("Up");
+
                         }
                         else if (swipeValue < 0)
                         {
@@ -145,7 +149,7 @@ namespace UnitySampleAssets._2D
                     if (swipeDistHorizontal > minSwipeDistX)
                     {
                         float swipeValue = Mathf.Sign(touch.position.x - startSwipePos.x);
-                        if (swipeValue > 0)
+                        if (swipeValue > 0 && !attacking)
                         {
                             attacking = true;
                             attackTimer = 0;

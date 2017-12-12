@@ -43,6 +43,7 @@ public class PlayerAttack : MonoBehaviour
 
 	IEnumerator chuck()
 	{
+
 		hasBeenFlung = true;
 		float i = 0f;
 		GameObject g = GameObject.Find("LanceEmpty");
@@ -53,6 +54,7 @@ public class PlayerAttack : MonoBehaviour
 		child.parent = null;
 		while(i<=1)
 		{
+
 			yield return new WaitForSeconds(.01f);
 			if (child != null)
             {
@@ -65,7 +67,11 @@ public class PlayerAttack : MonoBehaviour
                 if (i > .1)
                 {
 					child.gameObject.GetComponent<Obstacle> ().enabled = false;
-					child.gameObject.AddComponent<BoxCollider2D>();
+                    if(child.gameObject.GetComponent<BoxCollider2D>() == null)
+                    {
+                        child.gameObject.AddComponent<BoxCollider2D>();
+                    }
+					
 
                 }
             }
@@ -131,7 +137,7 @@ public class PlayerAttack : MonoBehaviour
                 if (swipeDistVertical > minSwipeDistY)
                 {
                     float swipeValue = Mathf.Sign(touch.position.y - startSwipePos.y);
-                    if (swipeValue > 0)
+                    if (swipeValue > 0 && !attacking)
                     {
                         attacking = true;
                         attackTimer = 0;
@@ -146,11 +152,18 @@ public class PlayerAttack : MonoBehaviour
                 if (swipeDistHorizontal > minSwipeDistX)
                 {
                     float swipeValue = Mathf.Sign(touch.position.x - startSwipePos.x);
-                    if (swipeValue > 0)
+                    if (swipeValue > 0 && !attacking)
                     {
+                        if (GameObject.Find("LanceEmpty").transform.childCount != 0)
+                        {
+                            if (hasBeenFlung == false)
+                            {
+                                StartCoroutine(chuck());
+                            }
+                        }
                         attacking = true;
                         attackTimer = 0;
-                        attackTrigger.gameObject.active = false;
+                        attackTrigger.gameObject.active = true;
                         attackTrigger.enabled = true;
 
                     }

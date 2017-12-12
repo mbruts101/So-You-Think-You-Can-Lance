@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BossBehaviour : MonoBehaviour {
     public Transform[] Positions;
@@ -14,10 +15,19 @@ public class BossBehaviour : MonoBehaviour {
     public Animator anim;
     public SpriteRenderer spr;
     public int fireSpeed = 15;
+    public AudioSource[] audios;
+    public AudioSource slow;
+    public AudioSource medium;
+    public AudioSource fast;
+    private bool invincible;
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
         spr = GetComponent<SpriteRenderer>();
+        audios = GetComponents<AudioSource>();
+        slow = audios[0];
+        medium = audios[1];
+        fast = audios[2];
         StartCoroutine("BossPattern");
 	}
 	
@@ -27,7 +37,8 @@ public class BossBehaviour : MonoBehaviour {
         {
             dead = true;
             StopCoroutine("BossPattern");
-            //Animate death here
+            Destroy(this.gameObject);
+            SceneManager.LoadScene(0);
         }
 	}
 
@@ -87,24 +98,33 @@ public class BossBehaviour : MonoBehaviour {
             }
             yield return null;
         }
+        
     }
+  
     void OnTriggerEnter2D(Collider2D col)
     {
 		Debug.Log (col.gameObject.name);
         if(col.gameObject.tag == "Stabbable")
         {
-            Destroy(col.gameObject);
+            col.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+           
             health = health - 1;
+               
             if(health == 2)
             {
-                speed = speed * 2;
-                fireSpeed = 20;
-            }
-            if (health == 1)
-            {
+                slow.Stop();
+                medium.Play();
                 speed = speed * 2;
                 fireSpeed = 25;
             }
+            if (health == 1)
+            {
+                medium.Stop();
+                fast.Play();
+                speed = speed * 2;
+                fireSpeed = 35;
+            }
+            
         }
     }
 }
