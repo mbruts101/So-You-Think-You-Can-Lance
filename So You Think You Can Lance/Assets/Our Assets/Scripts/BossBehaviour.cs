@@ -9,7 +9,7 @@ public class BossBehaviour : MonoBehaviour {
     public GameObject fireball;
     public Transform EggLaunchPosition;
     public GameObject egg;
-    public int health = 18;
+    public int health = 3;
     public bool dead = false;
     public Animator anim;
     public SpriteRenderer spr;
@@ -67,7 +67,7 @@ public class BossBehaviour : MonoBehaviour {
                 transform.position = Vector2.MoveTowards(transform.position, new Vector2(Positions[2].position.x, Positions[2].position.y), speed);
                 yield return null;
             }
-            for (int i = 0; i < 6; i++)
+            for (int i = 0; i < 1; i++)
             {
                 GameObject eggProjectile = (GameObject)Instantiate(egg, EggLaunchPosition.position, Quaternion.identity);
                 eggProjectile.GetComponent<Rigidbody2D>().velocity = Vector2.down * 5;
@@ -88,18 +88,19 @@ public class BossBehaviour : MonoBehaviour {
             yield return null;
         }
     }
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.gameObject.tag == "Stabbable)")
+		Debug.Log (col.gameObject.name);
+        if(col.gameObject.tag == "Stabbable")
         {
             Destroy(col.gameObject);
             health = health - 1;
-            if(health == 12)
+            if(health == 2)
             {
                 speed = speed * 2;
                 fireSpeed = 20;
             }
-            if (health == 6)
+            if (health == 1)
             {
                 speed = speed * 2;
                 fireSpeed = 25;

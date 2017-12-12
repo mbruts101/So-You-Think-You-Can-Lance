@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 58284453207789220}
   - component: {fileID: 114083557666128502}
   - component: {fileID: 114870765753434224}
+  - component: {fileID: 114372813703319148}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Stabbable
@@ -90,6 +91,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7527d5982a6ba7e4888b6dbdb9f724fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114372813703319148
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1831089516469054}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0195d9ac9281479497f076c083290bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
 --- !u!114 &114870765753434224
 MonoBehaviour:
   m_ObjectHideFlags: 1

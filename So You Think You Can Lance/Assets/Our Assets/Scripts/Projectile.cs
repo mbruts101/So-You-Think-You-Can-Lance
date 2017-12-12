@@ -17,14 +17,16 @@ public class Projectile : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D col)
 	{
-		if (col.gameObject.tag == "Stabbable") 
-		{
-			Destroy (col.gameObject.GetComponent<BoxCollider2D>());
-			Destroy(this.gameObject.GetComponent<BoxCollider2D>());
+		Debug.Log (col.gameObject.tag);
+
+		if (col.gameObject.tag == "Stabbable") {
+			Destroy (col.gameObject.GetComponent<BoxCollider2D> ());
+			Destroy (this.gameObject.GetComponent<BoxCollider2D> ());
 			enemy = col.gameObject;
 			StartCoroutine (spin ());
 			StartCoroutine (fall ());
-		}
+		} 
+
 	}
 
 	IEnumerator fall()
