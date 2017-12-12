@@ -46,6 +46,7 @@ public class AttackTrigger : MonoBehaviour {
 		yield return new WaitForSeconds (.05f);
 		var v = GameObject.Find ("LanceEmpty");
 		Destroy (col.gameObject.GetComponent<Rigidbody2D> ());
+		Destroy (col.gameObject.GetComponent <BoxCollider2D>());
 		col.gameObject.transform.SetParent(v.transform);
 		col.gameObject.GetComponent<Projectile> ().enabled = true;
 		col.gameObject.GetComponent<Obstacle> ().enabled = false;
@@ -55,6 +56,5 @@ public class AttackTrigger : MonoBehaviour {
 			col.gameObject.GetComponent<Animator>().enabled = false;
 			col.gameObject.GetComponent<runLeft>().enabled = false;
 		}
-
 	}
 }

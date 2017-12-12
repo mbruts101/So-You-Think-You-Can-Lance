@@ -28,12 +28,11 @@ public class buttonPress : MonoBehaviour {
 	{	
 		yield return new WaitForSeconds (1f);
 		GameObject door = GameObject.Find ("Door");
-		for (float i = 0f; i < 3f; i += .25f)
+		for (float i = 0f; i < 1f; i += .01f)
 		{
-			yield return new WaitForSeconds (.5f);
+			yield return new WaitForSeconds (.02f);
 			door.transform.position = new Vector3 (door.transform.position.x, door.transform.position.y - i, 0f);
 		}
-		yield return new WaitForSeconds (1f);
 		this.transform.position = new Vector3 (this.transform.position.x, this.transform.position.y - .25f, 0f);
 
 		GameObject g = GameObject.Find ("Sir Lance");

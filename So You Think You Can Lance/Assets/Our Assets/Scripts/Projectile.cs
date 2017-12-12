@@ -19,9 +19,7 @@ public class Projectile : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Stabbable") 
 		{
-			Destroy (col.gameObject.GetComponent<CircleCollider2D>());
 			Destroy (col.gameObject.GetComponent<BoxCollider2D>());
-			GameObject.Find("Sir Lance").GetComponent<PlayerAttack> ().toggleProjectileHit();
 			Destroy(this.gameObject.GetComponent<BoxCollider2D>());
 			enemy = col.gameObject;
 			StartCoroutine (spin ());
