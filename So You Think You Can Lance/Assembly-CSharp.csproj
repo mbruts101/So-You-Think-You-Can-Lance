@@ -56,10 +56,15 @@
      <Compile Include="Assets\buttonPress.cs" />
      <Compile Include="Assets\CameraFollow.cs" />
      <Compile Include="Assets\ceilingBandit.cs" />
+     <Compile Include="Assets\cFollow.cs" />
      <Compile Include="Assets\cutscene0.cs" />
      <Compile Include="Assets\cutScene1.cs" />
      <Compile Include="Assets\Cutscene2.cs" />
+     <Compile Include="Assets\die.cs" />
      <Compile Include="Assets\Follow.cs" />
+     <Compile Include="Assets\lanceOff.cs" />
+     <Compile Include="Assets\LanceRederer.cs" />
+     <Compile Include="Assets\LateEnableCollider.cs" />
      <Compile Include="Assets\level2.cs" />
      <Compile Include="Assets\Our Assets\Scripts\AttackTrigger.cs" />
      <Compile Include="Assets\Our Assets\Scripts\BossBehaviour.cs" />

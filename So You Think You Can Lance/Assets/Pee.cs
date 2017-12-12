@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnitySampleAssets._2D;
 
 public class Pee : MonoBehaviour {
+	public GameObject realCharacter;
 
 	// Use this for initialization
 	void Start () {
-		
+		realCharacter.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -57,6 +59,15 @@ public class Pee : MonoBehaviour {
 			g.transform.position = new Vector3 (temp.x + i, temp.y, 0f);
 		}
 		GameObject.Find("LanceLeft").GetComponent<Animator> ().enabled = false;
+		GameObject.Find ("LanceOff").GetComponent<lanceOff> ().activate = true;
+		realCharacter.transform.position = g.transform.position;
+		GameObject.Find("LanceLeft").GetComponent<SpriteRenderer> ().enabled = false;
+		Debug.Log (GameObject.Find ("Main Camera").GetComponent<Camera2DFollow> ().target);
+		GameObject.Find ("Main Camera").GetComponent<Camera2DFollow> ().target = realCharacter.transform;
+		Debug.Log (GameObject.Find ("Main Camera").GetComponent<Camera2DFollow> ().target);
+		GameObject.Find ("Camera").transform.parent = realCharacter.transform;
+		Destroy (g);
 		yield return new WaitForSeconds (.5f);
+
 	}
 }

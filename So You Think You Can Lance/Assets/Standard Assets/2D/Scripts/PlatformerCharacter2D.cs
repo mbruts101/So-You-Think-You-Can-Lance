@@ -79,7 +79,14 @@ namespace UnitySampleAssets._2D
 				frameCount++;
 				if (Time.timeSinceLevelLoad > 0 && reloadLevel && frameCount > 1) {
 					Debug.Log ("loading");
-					SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+					if (SceneManager.GetActiveScene ().buildIndex == 5) 
+					{
+						SceneManager.LoadScene ("level1");
+					} 
+					else 
+					{
+						SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
+					}
 					reloadLevel = false;   
 					frameCount = 0;
 				}

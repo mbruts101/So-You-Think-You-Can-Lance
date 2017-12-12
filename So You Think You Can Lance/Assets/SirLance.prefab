@@ -83,7 +83,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1876004728956306
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1578191572440428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 376.8, y: 16, z: -3.1203}
+  m_LocalPosition: {x: -13.7961235, y: -3.219275, z: 0}
   m_LocalScale: {x: 0.87707555, y: 0.8770747, z: 0.49509433}
   m_Children:
   - {fileID: 4708217434579462}
@@ -547,6 +547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08f91df3bd212f429df17f53ce2f364, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inCutscene: 0
   maxSpeed: 13
   jumpForce: 800
   crouchSpeed: 0.25
@@ -589,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d7b34a3bb2d4e4b926e7e729d3d410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  running: 0
 --- !u!124 &124100847880524718
 Behaviour:
   m_ObjectHideFlags: 1

@@ -20,3 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/BossFight.unity
     guid: 6dc3b09b196739b4bb3b66ae103cb398
+  - enabled: 1
+    path: Assets/cutsceneLevel1.unity
+    guid: b137a2c0200314a129318aedce45430c
+  - enabled: 1
+    path: Assets/level1.unity
+    guid: edbab45786d2f49c6aa5a831492ab84e
