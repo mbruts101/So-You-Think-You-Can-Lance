@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿//Michael Brutsch
+//1933153
+//bruts101@mail.chapman.edu
+//Level Design 2
+//So You Think You Can Lance
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,7 +17,7 @@ public class ShopScript : MonoBehaviour {
     public bool boughtBlack = false;
     // Use this for initialization
     void Start () {
-        PlayerDataKeeper.setCoins(100);
+        
         coin.text = PlayerDataKeeper.getCoins().ToString();
 	}
 	

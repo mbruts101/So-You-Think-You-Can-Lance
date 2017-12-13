@@ -1,4 +1,4 @@
-﻿//Michael Brutsch
+﻿//Michael Brutsch and Daniel Cole
 //1933153
 //bruts101@mail.chapman.edu
 //Level Design 2

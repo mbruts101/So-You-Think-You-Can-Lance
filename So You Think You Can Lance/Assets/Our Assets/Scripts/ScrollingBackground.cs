@@ -1,4 +1,9 @@
-﻿//https://www.youtube.com/watch?v=QkisHNmcK7Y
+﻿//Michael Brutsch
+//1933153
+//bruts101@mail.chapman.edu
+//Level Design 2
+//So You Think You Can Lance
+//https://www.youtube.com/watch?v=QkisHNmcK7Y
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

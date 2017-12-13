@@ -1,8 +1,4 @@
-﻿//Michael Brutsch
-//1933153
-//bruts101@mail.chapman.edu
-//Level Design 2
-//So You Think You Can Lance
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
