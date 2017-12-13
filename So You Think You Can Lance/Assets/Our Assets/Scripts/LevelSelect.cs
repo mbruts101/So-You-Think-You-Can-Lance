@@ -6,6 +6,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LevelSelect : MonoBehaviour {
@@ -25,18 +26,18 @@ public class LevelSelect : MonoBehaviour {
 
     public void Select1_1()
     {
-        Application.LoadLevel(1);
+        SceneManager.LoadScene("cutsceneLevel1");
     }
     public void Select1_2()
     {
-        Application.LoadLevel(2);
+        SceneManager.LoadScene("level2");
     }
     public void SelectShop()
     {
-        Application.LoadLevel(3);
+        SceneManager.LoadScene("ShopScene");
     }
     public void SelectBoss()
     {
-        Application.LoadLevel(4);
+        SceneManager.LoadScene("BossFight");
     }
 }
