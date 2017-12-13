@@ -53,10 +53,12 @@
   <ItemGroup>
      <Compile Include="Assets\activateRock.cs" />
      <Compile Include="Assets\BigCollectable.cs" />
+     <Compile Include="Assets\boatScript.cs" />
      <Compile Include="Assets\buttonPress.cs" />
      <Compile Include="Assets\CameraFollow.cs" />
      <Compile Include="Assets\ceilingBandit.cs" />
      <Compile Include="Assets\cFollow.cs" />
+     <Compile Include="Assets\chicky.cs" />
      <Compile Include="Assets\cutscene0.cs" />
      <Compile Include="Assets\cutScene1.cs" />
      <Compile Include="Assets\Cutscene2.cs" />
@@ -92,6 +94,8 @@
      <Compile Include="Assets\rockMo.cs" />
      <Compile Include="Assets\shieldScript.cs" />
      <Compile Include="Assets\skyBandit.cs" />
+     <Compile Include="Assets\speed.cs" />
+     <Compile Include="Assets\speedChange.cs" />
      <Compile Include="Assets\startBandit.cs" />
      <Compile Include="Assets\startLevel.cs" />
      <Compile Include="Assets\throwShuriken.cs" />

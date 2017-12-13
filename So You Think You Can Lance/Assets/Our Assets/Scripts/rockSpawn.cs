@@ -19,15 +19,14 @@ public class rockSpawn : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D c)
 	{
-		
-		if (isRolling) 
+		if (c.gameObject.tag == "Player") 
 		{
-			g.GetComponent<runLeft> ().enabled = true;
-			//g.GetComponent<rotate> ().enabled = true;
-		} 
-		else 
-		{
-			g.AddComponent<Rigidbody2D> ();
+			if (isRolling) {
+				g.GetComponent<runLeft> ().enabled = true;
+				//g.GetComponent<rotate> ().enabled = true;
+			} else {
+				g.AddComponent<Rigidbody2D> ();
+			}
 		}
 	}
 }

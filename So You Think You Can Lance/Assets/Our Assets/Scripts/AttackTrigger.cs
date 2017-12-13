@@ -50,7 +50,7 @@ public class AttackTrigger : MonoBehaviour {
 		col.gameObject.transform.SetParent(v.transform);
 		col.gameObject.GetComponent<Projectile> ().enabled = true;
 		col.gameObject.GetComponent<Obstacle> ().enabled = false;
-
+		Debug.Log ("STAB:" + col.gameObject.name);
 		if(col.gameObject.name != "Egg(Clone)")
 		{
 			col.gameObject.GetComponent<Animator>().enabled = false;

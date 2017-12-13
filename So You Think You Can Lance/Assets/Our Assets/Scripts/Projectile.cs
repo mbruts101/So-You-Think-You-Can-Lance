@@ -19,11 +19,16 @@ public class Projectile : MonoBehaviour {
 	{
 		if (col.gameObject.tag == "Stabbable") 
 		{
+			if (this.gameObject.transform.parent != null) 
+			{
+				Destroy (this.gameObject);
+			}
 			Destroy (col.gameObject.GetComponent<BoxCollider2D> ());
-			Destroy (this.gameObject.GetComponent<BoxCollider2D> ());
+			//Destroy (this.gameObject.GetComponent<BoxCollider2D> ());
+			//Destroy (this.gameObject.GetComponent<Rigidbody2D> ());
 			enemy = col.gameObject;
-			StartCoroutine (spin ());
-			StartCoroutine (fall ());
+			//StartCoroutine (spin ());
+			//StartCoroutine (fall ());
 		} 
 
 	}

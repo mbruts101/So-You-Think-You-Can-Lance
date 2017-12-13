@@ -43,7 +43,6 @@ public class PlayerAttack : MonoBehaviour
 
 	IEnumerator chuck()
 	{
-
 		hasBeenFlung = true;
 		float i = 0f;
 		GameObject g = GameObject.Find("LanceEmpty");
@@ -96,6 +95,10 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if (GameObject.Find ("LanceEmpty").transform.childCount == 0) 
+		{
+			hasBeenFlung = false;
+		}
         if (Input.GetKeyDown(KeyCode.D) && !attacking)
         {
 			if (GameObject.Find ("LanceEmpty").transform.childCount != 0) 

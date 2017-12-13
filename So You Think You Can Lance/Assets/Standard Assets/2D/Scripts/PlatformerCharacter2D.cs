@@ -17,7 +17,7 @@ namespace UnitySampleAssets._2D
 		public bool inCutscene = false;
 
         [SerializeField]
-        private float maxSpeed = 10f; // The fastest the player can travel in the x axis.
+        public float maxSpeed = 10f; // The fastest the player can travel in the x axis.
         [SerializeField]
         private float jumpForce = 10f; // Amount of force added when the player jumps.
 
