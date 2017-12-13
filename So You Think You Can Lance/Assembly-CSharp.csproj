@@ -55,6 +55,7 @@
      <Compile Include="Assets\BigCollectable.cs" />
      <Compile Include="Assets\boatScript.cs" />
      <Compile Include="Assets\buttonPress.cs" />
+     <Compile Include="Assets\buttonPress2.cs" />
      <Compile Include="Assets\CameraFollow.cs" />
      <Compile Include="Assets\ceilingBandit.cs" />
      <Compile Include="Assets\cFollow.cs" />
@@ -98,6 +99,8 @@
      <Compile Include="Assets\speedChange.cs" />
      <Compile Include="Assets\startBandit.cs" />
      <Compile Include="Assets\startLevel.cs" />
+     <Compile Include="Assets\stop.cs" />
+     <Compile Include="Assets\stopBoat.cs" />
      <Compile Include="Assets\throwShuriken.cs" />
      <Compile Include="Assets\unlockButtonCutscene.cs" />
      <Compile Include="Assets\waterDeath.cs" />
