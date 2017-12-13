@@ -69,6 +69,7 @@
      <Compile Include="Assets\LanceRederer.cs" />
      <Compile Include="Assets\LateEnableCollider.cs" />
      <Compile Include="Assets\level2.cs" />
+     <Compile Include="Assets\Obstacle2.cs" />
      <Compile Include="Assets\Our Assets\Scripts\AttackTrigger.cs" />
      <Compile Include="Assets\Our Assets\Scripts\BossBehaviour.cs" />
      <Compile Include="Assets\Our Assets\Scripts\BossPlayerController.cs" />

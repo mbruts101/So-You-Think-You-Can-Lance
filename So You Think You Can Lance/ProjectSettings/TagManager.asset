@@ -51,6 +51,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: REAL BACKGROUND
+    uniqueID: 2985336899
+    locked: 0
   - name: Background
     uniqueID: 3728468551
     locked: 0
