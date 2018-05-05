@@ -9,10 +9,12 @@ using UnityEngine;
 
 public class LanceRederer : MonoBehaviour {
     public SpriteRenderer spr;
+    public PlayerDataKeeper data;
+
 	// Use this for initialization
 	void Start () {
         spr = this.GetComponent<SpriteRenderer>();
-        string lanceString = PlayerDataKeeper.getLance();
+        string lanceString = data.getLance();
         Debug.Log(lanceString);
         spr.sprite = Resources.Load<Sprite>("Lances/"+ lanceString);
 	}

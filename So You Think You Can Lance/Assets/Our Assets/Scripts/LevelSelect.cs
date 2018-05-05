@@ -13,7 +13,7 @@ public class LevelSelect : MonoBehaviour {
     public Text coin;
 	// Use this for initialization
 	void Start () {
-        coin.text = PlayerDataKeeper.getCoins().ToString();
+        coin.text = PlayerPrefs.GetInt("Coins").ToString();
 	}
 	
 	// Update is called once per frame

@@ -9,6 +9,8 @@ using UnityEngine;
 
 public class LevelFinish : MonoBehaviour {
     private LevelManager lm;
+    PlayerDataKeeper data;
+
 	// Use this for initialization
 	void Start () {
         lm = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<LevelManager>();
@@ -22,7 +24,7 @@ public class LevelFinish : MonoBehaviour {
     {
         if(col.gameObject.tag == "Player")
         {
-            PlayerDataKeeper.setCoins(lm.coinsCollected);
+            data.saveCoins();
             Application.LoadLevel(0);
         }
     }

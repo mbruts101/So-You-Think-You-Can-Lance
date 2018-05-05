@@ -7,18 +7,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class PlayerDataKeeper {
-    public static int coins;
-    public static string Lance;
+public class PlayerDataKeeper : MonoBehaviour{
+    public int coins;
+    public string Lance;
+    public int startingCoins;
 
-    public static void setCoins(int newcoins)
+    void Start()
     {
+        startingCoins = PlayerPrefs.GetInt("Coins");
+    }
 
-        coins = getCoins();
-        PlayerPrefs.SetInt("Coins", coins + newcoins);
+    public void resetCoins()
+    {
+        PlayerPrefs.SetInt("Coins", 0);
         PlayerPrefs.Save();
     }
-    public static int getCoins()
+
+    public void saveCoins()
+    {
+        PlayerPrefs.SetInt("Coins", coins);
+        PlayerPrefs.Save();
+    }
+    public int getSavedCoins()
     {
         if(PlayerPrefs.HasKey("Coins") == false)
         {
@@ -26,11 +36,14 @@ public static class PlayerDataKeeper {
         }
         return PlayerPrefs.GetInt("Coins");
     }
-    public static void setLance(string lance)
+
+
+    public void setLance(string lance)
     {
         PlayerPrefs.SetString("Lance", lance);
+        PlayerPrefs.Save();
     }
-    public static string getLance()
+    public string getLance()
     {
         if (PlayerPrefs.HasKey("Lance") == false) 
         {
@@ -38,7 +51,7 @@ public static class PlayerDataKeeper {
         }
         return PlayerPrefs.GetString("Lance");
     }
-    public static int getPurpleBought()
+    public int getPurpleBought()
     {
         if(PlayerPrefs.HasKey("BoughtPurple") == false)
         {
@@ -46,7 +59,7 @@ public static class PlayerDataKeeper {
         }
         return PlayerPrefs.GetInt("BoughtPurple");
     }
-    public static int getInvertedBought()
+    public int getInvertedBought()
     {
         if (PlayerPrefs.HasKey("BoughtInverted") == false)
         {
@@ -54,7 +67,7 @@ public static class PlayerDataKeeper {
         }
         return PlayerPrefs.GetInt("BoughtInverted");
     }
-    public static int getBlackBought()
+    public int getBlackBought()
     {
         if (PlayerPrefs.HasKey("BoughtBlack") == false)
         {
@@ -62,7 +75,7 @@ public static class PlayerDataKeeper {
         }
         return PlayerPrefs.GetInt("BoughtBlack");
     }
-    public static int getChristmasBought()
+    public int getChristmasBought()
     {
         if (PlayerPrefs.HasKey("BoughtChristmas") == false)
         {
@@ -70,22 +83,22 @@ public static class PlayerDataKeeper {
         }
         return PlayerPrefs.GetInt("BoughtChristmas");
     }
-    public static void setPurpleBought(int status)
+    public void setPurpleBought(int status)
     {
         PlayerPrefs.SetInt("BoughtPurple", status);
         PlayerPrefs.Save();
     }
-    public static void setInvertedBought(int status)
+    public void setInvertedBought(int status)
     {
         PlayerPrefs.SetInt("BoughtInverted", status);
         PlayerPrefs.Save();
     }
-    public static void setBlackBought(int status)
+    public void setBlackBought(int status)
     {
         PlayerPrefs.SetInt("BoughtBlack", status);
         PlayerPrefs.Save();
     }
-    public static void setChristmasBought(int status)
+    public void setChristmasBought(int status)
     {
         PlayerPrefs.SetInt("BoughtChristmas", status);
         PlayerPrefs.Save();

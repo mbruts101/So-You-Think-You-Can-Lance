@@ -15,15 +15,17 @@ public class ShopScript : MonoBehaviour {
     public bool boughtInverted = false;
     public bool boughtChristmas = false;
     public bool boughtBlack = false;
+    public PlayerDataKeeper data;
+
     // Use this for initialization
     void Start () {
         
-        coin.text = PlayerDataKeeper.getCoins().ToString();
+        coin.text = data.getSavedCoins().ToString();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        coin.text = PlayerDataKeeper.getCoins().ToString();
+        coin.text = data.coins.ToString();
 	}
 
     public void ExitShop()
@@ -32,54 +34,56 @@ public class ShopScript : MonoBehaviour {
     }
     public void PurpleLance()
     {
-        if(PlayerDataKeeper.getCoins() > 50 && PlayerPrefs.GetInt("BoughtPurple") == 0)
+        if(data.coins >= 50 && PlayerPrefs.GetInt("BoughtPurple") == 0)
         {
-            PlayerDataKeeper.setCoins(-50);
-            PlayerDataKeeper.setLance("Purple_Lance");
+            data.coins -= 50;
+            data.saveCoins();
+            data.setLance("Purple_Lance");
             boughtPurple = true;
         }
         else if (PlayerPrefs.GetInt("BoughtPurple") == 1)
         {
-            PlayerDataKeeper.setLance("Purple_Lance");
+            data.setLance("Purple_Lance");
         }
     }
     public void BlackLance()
     {
-        if (PlayerDataKeeper.getCoins() > 60 && PlayerPrefs.GetInt("BoughtBlack") == 0)
+        if (data.coins >= 50 && PlayerPrefs.GetInt("BoughtBlack") == 0)
         {
-            PlayerDataKeeper.setCoins(-60);
-            PlayerDataKeeper.setLance("Black white Lance");
+            data.coins -= 50;
+            data.saveCoins();
+            data.setLance("Black white Lance");
             boughtBlack = true;
         }
         else if (PlayerPrefs.GetInt("BoughtBlack") == 1)
         {
-            PlayerDataKeeper.setLance("Black white Lance");
+            data.setLance("Black white Lance");
         }
     }
     public void ChristmasLance()
     {
-        if (PlayerDataKeeper.getCoins() > 100 && PlayerPrefs.GetInt("BoughtChristmas") == 0)
+        if (data.coins >= 100 && PlayerPrefs.GetInt("BoughtChristmas") == 0)
         {
-            PlayerDataKeeper.setCoins(-100);
-            PlayerDataKeeper.setLance("CHRISTMAS LANDCE");
+            data.coins -= 100;
+            data.setLance("CHRISTMAS LANDCE");
             boughtChristmas = true;
         }
         else if (PlayerPrefs.GetInt("BoughtChristmas") == 1)
         {
-            PlayerDataKeeper.setLance("CHRISTMAS LANDCE");
+            data.setLance("CHRISTMAS LANDCE");
         }
     }
     public void InvertedLance()
     {
-        if (PlayerDataKeeper.getCoins() > 80 && PlayerPrefs.GetInt("BoughtInverted") == 0)
+        if (data.coins >= 80 && PlayerPrefs.GetInt("BoughtInverted") == 0)
         {
-            PlayerDataKeeper.setCoins(-80);
-            PlayerDataKeeper.setLance("Inverted lance");
+            data.coins -= 80;
+            data.setLance("Inverted lance");
             boughtChristmas = true;
         }
         else if (PlayerPrefs.GetInt("BoughtInverted") == 1)
         {
-            PlayerDataKeeper.setLance("Inverted lance");
+            data.setLance("Inverted lance");
         }
     }
 

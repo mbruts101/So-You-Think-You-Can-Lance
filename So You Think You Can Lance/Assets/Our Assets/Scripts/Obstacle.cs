@@ -10,20 +10,18 @@ using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public PlayerDataKeeper data;
+
+    void Start()
+    {
+        data = GameObject.Find("LevelManager").GetComponent<PlayerDataKeeper>();
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
 		if(col.gameObject.tag == "Player") 
 		{
+            data.resetCoins();
 			Debug.Log (col.gameObject.name);
 			Destroy (col.gameObject);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

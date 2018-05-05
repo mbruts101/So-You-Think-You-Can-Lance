@@ -9,13 +9,17 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour {
+    
     public int coinsTotal;
-    public int coinsCollected = 0;
     public Text coinscollectedText;
     public Text coinsTotalText;
+    public PlayerDataKeeper data;
+
 	// Use this for initialization
 	void Start () {
         CountTotalCoinsAvailable();
+        data.coins = data.getSavedCoins();
+        coinscollectedText.text = data.coins.ToString();
 	}
 	
 	// Update is called once per frame
@@ -29,7 +33,7 @@ public class LevelManager : MonoBehaviour {
     }
     public void CoinCollected()
     {
-        coinsCollected += 1;
-        coinscollectedText.text = coinsCollected.ToString();
+        data.coins += 1;
+        coinscollectedText.text = data.coins.ToString();
     }
 }

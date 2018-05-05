@@ -5,11 +5,13 @@ using UnityEngine.UI;
 
 public class level2 : MonoBehaviour {
 	public GameObject center;
+    public PlayerDataKeeper data;
 
 	// Use this for initialization
 
 	void Start () {
 		center.GetComponent<CanvasRenderer> ().SetAlpha (0.0f);
+        data = GameObject.Find("LevelManager").GetComponent<PlayerDataKeeper>();
 	}
 	
 	// Update is called once per frame
@@ -29,6 +31,7 @@ public class level2 : MonoBehaviour {
 	{
 		center.GetComponent<Image> ().CrossFadeAlpha (1f, 2f, true);
 		yield return new WaitForSeconds (2f);
+        data.saveCoins();
 		Application.LoadLevel ("Level2");
 	}
 
