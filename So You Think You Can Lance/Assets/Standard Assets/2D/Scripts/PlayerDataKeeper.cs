@@ -6,6 +6,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnitySampleAssets._2D;
 
 public class PlayerDataKeeper : MonoBehaviour{
     public int coins;
@@ -19,7 +20,8 @@ public class PlayerDataKeeper : MonoBehaviour{
 
     public void resetCoins()
     {
-        PlayerPrefs.SetInt("Coins", 0);
+        Debug.Log(startingCoins);
+        PlayerPrefs.SetInt("Coins", startingCoins);
         PlayerPrefs.Save();
     }
 

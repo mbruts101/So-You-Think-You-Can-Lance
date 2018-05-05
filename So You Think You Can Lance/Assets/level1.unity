@@ -27176,6 +27176,7 @@ MonoBehaviour:
   minSwipeDistX: 0
   attackTrigger: {fileID: 1032492418}
   upAttackTrigger: {fileID: 1773919963}
+  data: {fileID: 102204231}
 --- !u!50 &751811116
 Rigidbody2D:
   serializedVersion: 4

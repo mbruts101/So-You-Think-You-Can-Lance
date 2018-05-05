@@ -83,7 +83,6 @@
      <Compile Include="Assets\Our Assets\Scripts\Obstacle2.cs" />
      <Compile Include="Assets\Our Assets\Scripts\Pee.cs" />
      <Compile Include="Assets\Our Assets\Scripts\PlayerAttack.cs" />
-     <Compile Include="Assets\Our Assets\Scripts\PlayerDataKeeper.cs" />
      <Compile Include="Assets\Our Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Our Assets\Scripts\rockMo.cs" />
      <Compile Include="Assets\Our Assets\Scripts\rockSpawn.cs" />

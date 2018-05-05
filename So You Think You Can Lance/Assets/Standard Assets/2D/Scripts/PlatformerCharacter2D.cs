@@ -58,6 +58,8 @@ namespace UnitySampleAssets._2D
         public Collider2D attackTrigger;
         public Collider2D upAttackTrigger;
 
+        public PlayerDataKeeper data;
+
         private void Awake()
         {
             
@@ -78,13 +80,14 @@ namespace UnitySampleAssets._2D
 			if (rb.velocity.magnitude == 0 && !inCutscene) {
 				frameCount++;
 				if (Time.timeSinceLevelLoad > 0 && reloadLevel && frameCount > 1) {
-					Debug.Log ("loading");
+                    Debug.Log (SceneManager.GetActiveScene ().buildIndex);
 					if (SceneManager.GetActiveScene ().buildIndex == 5) 
 					{
 						SceneManager.LoadScene ("level1");
 					} 
 					else 
 					{
+                        data.resetCoins();
 						SceneManager.LoadScene (SceneManager.GetActiveScene ().buildIndex);
 					}
 					reloadLevel = false;   
